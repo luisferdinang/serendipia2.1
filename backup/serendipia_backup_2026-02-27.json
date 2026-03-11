@@ -1,0 +1,4328 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Copia B/N (Carta)",
+      "priceUSD": 0.1,
+      "category": "Copias",
+      "inventoryId": "inv_bond_letter",
+      "consumption": 1
+    },
+    {
+      "id": "2",
+      "name": "Copia Color (Carta)",
+      "priceUSD": 0.25,
+      "category": "Copias",
+      "inventoryId": "inv_bond_letter",
+      "consumption": 1
+    },
+    {
+      "id": "3",
+      "name": "Impresión B/N",
+      "priceUSD": 0.15,
+      "category": "Impresión",
+      "inventoryId": "inv_bond_letter",
+      "consumption": 1
+    },
+    {
+      "id": "4",
+      "name": "Impresión Color",
+      "priceUSD": 0.29,
+      "category": "Impresión",
+      "inventoryId": "inv_bond_letter",
+      "consumption": 1,
+      "materials": [
+        {
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Fondo Negro",
+      "priceUSD": 2,
+      "category": "Servicios",
+      "inventoryId": "inv_bond_letter",
+      "consumption": 1
+    },
+    {
+      "id": "6",
+      "name": "Escaneo",
+      "priceUSD": 0.5,
+      "category": "Digital",
+      "consumption": 0
+    },
+    {
+      "id": "7",
+      "name": "Trámite SAIME",
+      "priceUSD": 3,
+      "category": "Gestión",
+      "inventoryId": "inv_bond_letter",
+      "consumption": 2
+    },
+    {
+      "id": "8",
+      "name": "Foto Carnet (4x4)",
+      "priceUSD": 1.5,
+      "category": "Fotografía",
+      "inventoryId": "inv_photo_4x6",
+      "consumption": 0.25
+    },
+    {
+      "id": "1768613756840",
+      "name": "Impresion Opalina Carta",
+      "priceUSD": 0.7,
+      "category": "General",
+      "inventoryId": "inv_cartulina",
+      "consumption": 1
+    },
+    {
+      "id": "1768666050886",
+      "name": "Fotografico tipo carta",
+      "priceUSD": 0.9,
+      "category": "General",
+      "inventoryId": "inv_photo_4x6",
+      "consumption": 1
+    },
+    {
+      "id": "1768753536381",
+      "name": "estampitas",
+      "priceUSD": 0.3,
+      "category": "General",
+      "inventoryId": "inv_bond_letter",
+      "consumption": 1
+    },
+    {
+      "id": "1768754171997",
+      "name": "plastificacion carnet",
+      "priceUSD": 0.35,
+      "category": "General",
+      "inventoryId": "inv_1768754087396",
+      "consumption": 1
+    },
+    {
+      "id": "1768827267007",
+      "name": "oficio impresion",
+      "priceUSD": 0.09,
+      "category": "General",
+      "inventoryId": "inv_bond_legal",
+      "consumption": 0
+    },
+    {
+      "id": "1768846734077",
+      "name": "impresion foto a5",
+      "priceUSD": 0.5,
+      "category": "fotografía",
+      "materials": [],
+      "consumption": 0
+    },
+    {
+      "id": "1768874658298",
+      "name": "estam",
+      "priceUSD": 100,
+      "category": "General",
+      "materials": [],
+      "consumption": 0
+    },
+    {
+      "id": "1769130290169",
+      "name": "foto tipo a5",
+      "priceUSD": 0.6,
+      "category": "General",
+      "materials": [],
+      "consumption": 0
+    },
+    {
+      "id": "1769439150935",
+      "name": "impresion papel stciker",
+      "priceUSD": 0.9,
+      "category": "General",
+      "materials": [
+        {
+          "inventoryId": "inv_1769439123855",
+          "consumption": 1
+        }
+      ],
+      "inventoryId": "inv_1769439123855",
+      "consumption": 1
+    },
+    {
+      "id": "1769633258893",
+      "name": "otros",
+      "priceUSD": 1,
+      "category": "General",
+      "materials": [],
+      "consumption": 0
+    },
+    {
+      "id": "1769957480391",
+      "name": "Curriculum",
+      "priceUSD": 2.5,
+      "category": "General",
+      "materials": [
+        {
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1
+        }
+      ],
+      "inventoryId": "inv_bond_letter",
+      "consumption": 1
+    },
+    {
+      "id": "1769957523990",
+      "name": "referencia personales",
+      "priceUSD": 0.35,
+      "category": "General",
+      "materials": [],
+      "consumption": 0
+    },
+    {
+      "id": "1769957556870",
+      "name": "actualizacion de rif",
+      "priceUSD": 1.5,
+      "category": "General",
+      "materials": [],
+      "consumption": 0
+    },
+    {
+      "id": "1771443497159",
+      "name": "foto polaroid pequeña",
+      "priceUSD": -0.3,
+      "category": "General",
+      "materials": [],
+      "consumption": 0
+    },
+    {
+      "id": "1771853626457",
+      "name": "impresion foto tipo carnet",
+      "priceUSD": 1,
+      "category": "General",
+      "materials": [
+        {
+          "inventoryId": "inv_photo_4x6",
+          "consumption": 1
+        }
+      ],
+      "inventoryId": "inv_photo_4x6",
+      "consumption": 1
+    }
+  ],
+  "inventory": [
+    {
+      "id": "inv_bond_letter",
+      "name": "Papel Bond (Carta)",
+      "quantity": -229,
+      "unit": "hojas"
+    },
+    {
+      "id": "inv_bond_legal",
+      "name": "Papel Bond (Oficio)",
+      "quantity": 100,
+      "unit": "hojas"
+    },
+    {
+      "id": "inv_photo_4x6",
+      "name": "Papel Fotográfico 4x6",
+      "quantity": 8,
+      "unit": "hojas"
+    },
+    {
+      "id": "inv_cartulina",
+      "name": "Cartulina",
+      "quantity": 9,
+      "unit": "hojas"
+    },
+    {
+      "id": "inv_1768754087396",
+      "name": "lamina de plastificar carnet",
+      "quantity": 96,
+      "unit": "lamina"
+    },
+    {
+      "id": "inv_1769439123855",
+      "name": "papel de sticker",
+      "quantity": 5,
+      "unit": "hojas"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "1768613680192",
+      "timestamp": 1768613680192,
+      "items": [
+        {
+          "id": "1",
+          "name": "Copia B/N (Carta)",
+          "priceUSD": 0.072567,
+          "category": "Copias",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 36
+        }
+      ],
+      "totalUSD": 2.6124120000000004,
+      "totalVES": 899.9944821252001,
+      "rateUsed": 344.5071,
+      "payments": [
+        {
+          "method": "Fiado / Crédito",
+          "amount": 2.61,
+          "amountInUSD": 2.61
+        }
+      ],
+      "debtPayments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 900,
+          "amountInUSD": 2.6124280167230225,
+          "timestamp": 1768689663218
+        }
+      ],
+      "clientName": "Yenifer centeno",
+      "isPaid": true
+    },
+    {
+      "id": "1768613726056",
+      "timestamp": 1768613726056,
+      "items": [
+        {
+          "id": "1",
+          "name": "Copia B/N (Carta)",
+          "priceUSD": 0.072567,
+          "category": "Copias",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 19
+        }
+      ],
+      "totalUSD": 1.378773,
+      "totalVES": 474.9970877883,
+      "rateUsed": 344.5071,
+      "payments": [
+        {
+          "method": "Fiado / Crédito",
+          "amount": 1.38,
+          "amountInUSD": 1.38
+        }
+      ],
+      "debtPayments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 475,
+          "amountInUSD": 1.3787814532704843,
+          "timestamp": 1768689692266
+        }
+      ],
+      "clientId": "1768613722968",
+      "clientName": "yenifer centeno",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1768613926832",
+      "timestamp": 1768613926832,
+      "items": [
+        {
+          "id": "1768613756840",
+          "name": "Impresion Opalina Carta",
+          "priceUSD": 0.58054,
+          "category": "General",
+          "inventoryId": "inv_cartulina",
+          "consumption": 1,
+          "quantity": 11
+        }
+      ],
+      "totalUSD": 6.38594,
+      "totalVES": 2200.0016701739996,
+      "rateUsed": 344.5071,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 2200,
+          "amountInUSD": 6.385935151989611,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1768666118383",
+      "timestamp": 1768666118383,
+      "items": [
+        {
+          "id": "1768666050886",
+          "name": "Fotografico tipo carta",
+          "priceUSD": 0.870809,
+          "category": "General",
+          "inventoryId": "inv_photo_4x6",
+          "consumption": 1,
+          "quantity": 2
+        }
+      ],
+      "totalUSD": 1.741618,
+      "totalVES": 599.9997664878,
+      "rateUsed": 344.5071,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 600,
+          "amountInUSD": 1.7416186778153484
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1768666179071",
+      "timestamp": 1768666179071,
+      "items": [
+        {
+          "id": "1",
+          "name": "Copia B/N (Carta)",
+          "priceUSD": 0.072567,
+          "category": "Copias",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 12
+        }
+      ],
+      "totalUSD": 0.8708040000000001,
+      "totalVES": 299.9981607084,
+      "rateUsed": 344.5071,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 300,
+          "amountInUSD": 0.8708093389076742
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1768684798041",
+      "timestamp": 1768684798041,
+      "items": [
+        {
+          "id": "1",
+          "name": "Copia B/N (Carta)",
+          "priceUSD": 0.058054,
+          "category": "Copias",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 71
+        }
+      ],
+      "totalUSD": 4.121834,
+      "totalVES": 1420.0010780213997,
+      "rateUsed": 344.5071,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 1420,
+          "amountInUSD": 4.121830870829658,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientName": "truco los guaros",
+      "isPaid": true
+    },
+    {
+      "id": "1768686284513",
+      "timestamp": 1768686284513,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.145135,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 4
+        }
+      ],
+      "totalUSD": 0.58054,
+      "totalVES": 200.00015183399998,
+      "rateUsed": 344.5071,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 200,
+          "amountInUSD": 0.5805395592717828
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1768753610060",
+      "timestamp": 1768753610060,
+      "items": [
+        {
+          "id": "1768753536381",
+          "name": "estampitas",
+          "priceUSD": 0.348324,
+          "category": "General",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 2
+        }
+      ],
+      "totalUSD": 0.696648,
+      "totalVES": 240.0001822008,
+      "rateUsed": 344.5071,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 240,
+          "amountInUSD": 0.6966474711261393,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1768753603700",
+      "clientName": "Mary hernandez",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1768754214957",
+      "timestamp": 1768754214957,
+      "items": [
+        {
+          "id": "1",
+          "name": "Copia B/N (Carta)",
+          "priceUSD": 0.072567,
+          "category": "Copias",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 2
+        },
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.145135,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 1
+        },
+        {
+          "id": "1768754171997",
+          "name": "plastificacion carnet",
+          "priceUSD": 0.29027,
+          "category": "General",
+          "inventoryId": "inv_1768754087396",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.5805389999999999,
+      "totalVES": 199.99980732689997,
+      "rateUsed": 344.5071,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 200,
+          "amountInUSD": 0.5805395592717828
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1768784129778",
+      "timestamp": 1768784129778,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.232216,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 4
+        }
+      ],
+      "totalUSD": 0.928864,
+      "totalVES": 320.0002429344,
+      "rateUsed": 344.5071,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 320,
+          "amountInUSD": 0.9288632948348525,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1768784085346",
+      "clientName": "Magdiolis Ramírez",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1768827352529",
+      "timestamp": 1768827352529,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.072567,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 4
+        },
+        {
+          "id": "1768827267007",
+          "name": "oficio impresion",
+          "priceUSD": 0.087081,
+          "category": "General",
+          "inventoryId": "inv_bond_legal",
+          "consumption": 0,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.37734900000000005,
+      "totalVES": 129.99940967790002,
+      "rateUsed": 344.5071,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 130,
+          "amountInUSD": 0.37735071352665883
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1768846838270",
+      "timestamp": 1768846838270,
+      "items": [
+        {
+          "id": "1768846734077",
+          "name": "impresion foto a5",
+          "priceUSD": 0.362837,
+          "category": "fotografía",
+          "materials": [],
+          "consumption": 0,
+          "quantity": 8
+        }
+      ],
+      "totalUSD": 2.902696,
+      "totalVES": 999.9993811416,
+      "rateUsed": 344.5071,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 1000,
+          "amountInUSD": 2.9026977963589142,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1768846836725",
+      "clientName": "Anahica tovar",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1768874751994",
+      "timestamp": 1768874751994,
+      "items": [
+        {
+          "id": "1",
+          "name": "Copia B/N (Carta)",
+          "priceUSD": 0.1,
+          "category": "Copias",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.1,
+      "totalVES": 34.45071,
+      "rateUsed": 344.5071,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 34.45,
+          "amountInUSD": 0.0999979390845646,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1768926969814",
+      "timestamp": 1768926969814,
+      "items": [
+        {
+          "id": "1",
+          "name": "Copia B/N (Carta)",
+          "priceUSD": 0.058054,
+          "category": "Copias",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 3
+        },
+        {
+          "id": "1768827267007",
+          "name": "oficio impresion",
+          "priceUSD": 0.087081,
+          "category": "General",
+          "inventoryId": "inv_bond_legal",
+          "consumption": 0,
+          "quantity": 2
+        }
+      ],
+      "totalUSD": 0.348324,
+      "totalVES": 120.0000911004,
+      "rateUsed": 344.5071,
+      "payments": [
+        {
+          "method": "Efectivo USD",
+          "amount": 0.35,
+          "amountInUSD": 0.35
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769029973548",
+      "timestamp": 1769029973548,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.071992,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 5
+        }
+      ],
+      "totalUSD": 0.35996,
+      "totalVES": 125.000825476,
+      "rateUsed": 347.2631,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 125,
+          "amountInUSD": 0.35995762290897015,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1769029971460",
+      "clientName": "Gerlys Briceño",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1769031987459",
+      "timestamp": 1769031987459,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.143983,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 4
+        }
+      ],
+      "totalUSD": 0.575932,
+      "totalVES": 199.9999317092,
+      "rateUsed": 347.2631,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 200,
+          "amountInUSD": 0.5759321966543522,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769039338137",
+      "timestamp": 1769039338137,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.071992,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 4
+        },
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.143983,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 6
+        }
+      ],
+      "totalUSD": 1.151866,
+      "totalVES": 400.0005579446,
+      "rateUsed": 347.2631,
+      "payments": [
+        {
+          "method": "Fiado / Crédito",
+          "amount": 1.15,
+          "amountInUSD": 1.15
+        }
+      ],
+      "debtPayments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 400,
+          "amountInUSD": 1.1430949065977152,
+          "timestamp": 1769091142161
+        }
+      ],
+      "clientName": "luris sifontes",
+      "isPaid": true
+    },
+    {
+      "id": "1769130357233",
+      "timestamp": 1769130357233,
+      "items": [
+        {
+          "id": "1769130290169",
+          "name": "foto tipo a5",
+          "priceUSD": 0.571547,
+          "category": "General",
+          "materials": [],
+          "consumption": 0,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.571547,
+      "totalVES": 199.99984137840002,
+      "rateUsed": 349.9272,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 200,
+          "amountInUSD": 0.5715474532988576
+        }
+      ],
+      "debtPayments": [],
+      "clientName": "Milagros guaros",
+      "isPaid": true
+    },
+    {
+      "id": "1769213646599",
+      "timestamp": 1769213646599,
+      "items": [
+        {
+          "id": "1",
+          "name": "Copia B/N (Carta)",
+          "priceUSD": 0.057155,
+          "category": "Copias",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 1
+        },
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.071443,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 2
+        }
+      ],
+      "totalUSD": 0.20004100000000002,
+      "totalVES": 69.99978701520001,
+      "rateUsed": 349.9272,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 70,
+          "amountInUSD": 0.20004160865460013,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769217951357",
+      "timestamp": 1769217951357,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.142887,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 3
+        }
+      ],
+      "totalUSD": 0.42866099999999996,
+      "totalVES": 150.0001434792,
+      "rateUsed": 349.9272,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 150,
+          "amountInUSD": 0.42866058997414314
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769275294469",
+      "timestamp": 1769275294469,
+      "items": [
+        {
+          "id": "1768754171997",
+          "name": "plastificacion carnet",
+          "priceUSD": 0.281252,
+          "category": "General",
+          "inventoryId": "inv_1768754087396",
+          "consumption": 1,
+          "quantity": 1
+        },
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.140626,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.421878,
+      "totalVES": 149.9999041584,
+      "rateUsed": 355.5528,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 150,
+          "amountInUSD": 0.4218782695565891
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769356956529",
+      "timestamp": 1769356956529,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.070313,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 6
+        }
+      ],
+      "totalUSD": 0.421878,
+      "totalVES": 149.9999041584,
+      "rateUsed": 355.5528,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 150,
+          "amountInUSD": 0.4218782695565891
+        }
+      ],
+      "debtPayments": [],
+      "clientName": "yormarys guaros",
+      "isPaid": true
+    },
+    {
+      "id": "1769357483761",
+      "timestamp": 1769357483761,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.140626,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.140626,
+      "totalVES": 49.9999680528,
+      "rateUsed": 355.5528,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 50,
+          "amountInUSD": 0.14062608985219635,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1768846836725",
+      "clientName": "Anahica tovar",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1769376061592",
+      "timestamp": 1769376061592,
+      "items": [
+        {
+          "id": "1",
+          "name": "Copia B/N (Carta)",
+          "priceUSD": 0.070313,
+          "category": "Copias",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 3
+        }
+      ],
+      "totalUSD": 0.210939,
+      "totalVES": 74.9999520792,
+      "rateUsed": 355.5528,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 75,
+          "amountInUSD": 0.21093913477829454
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769383084750",
+      "timestamp": 1769383084750,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.196877,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 2
+        }
+      ],
+      "totalUSD": 0.393754,
+      "totalVES": 140.0003372112,
+      "rateUsed": 355.5528,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 140,
+          "amountInUSD": 0.3937530515861498
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1769383081894",
+      "clientName": "leonibel guaros",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1769383198222",
+      "timestamp": 1769383198222,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.084376,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 9
+        },
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.225002,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 3
+        }
+      ],
+      "totalUSD": 1.43439,
+      "totalVES": 510.001380792,
+      "rateUsed": 355.5528,
+      "payments": [
+        {
+          "method": "Fiado / Crédito",
+          "amount": 1.43,
+          "amountInUSD": 1.43
+        }
+      ],
+      "debtPayments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 510,
+          "amountInUSD": 1.4343861164924028,
+          "timestamp": 1769383504358
+        }
+      ],
+      "clientId": "1768784085346",
+      "clientName": "Magdiolis Ramírez",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1769386733934",
+      "timestamp": 1769386733934,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.168751,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 5
+        }
+      ],
+      "totalUSD": 0.843755,
+      "totalVES": 299.999452764,
+      "rateUsed": 355.5528,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 300,
+          "amountInUSD": 0.8437565391131782
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769386760285",
+      "timestamp": 1769386760285,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.196877,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.196877,
+      "totalVES": 70.0001686056,
+      "rateUsed": 355.5528,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 70,
+          "amountInUSD": 0.1968765257930749,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769437263352",
+      "timestamp": 1769437263352,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.05625,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 10
+        },
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.140626,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 2
+        }
+      ],
+      "totalUSD": 0.8437520000000001,
+      "totalVES": 299.9983861056,
+      "rateUsed": 355.5528,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 300,
+          "amountInUSD": 0.8437565391131782,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1769437234952",
+      "clientName": "Clemen Salazar",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1769439262039",
+      "timestamp": 1769439262039,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.168751,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 18
+        },
+        {
+          "id": "1769439150935",
+          "name": "impresion papel stciker",
+          "priceUSD": 0.843757,
+          "category": "General",
+          "materials": [
+            {
+              "inventoryId": "inv_1769439123855",
+              "consumption": 1
+            }
+          ],
+          "inventoryId": "inv_1769439123855",
+          "consumption": 1,
+          "quantity": 4
+        }
+      ],
+      "totalUSD": 6.412546000000001,
+      "totalVES": 2279.9986854288004,
+      "rateUsed": 355.5528,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 2280,
+          "amountInUSD": 6.412549697260154,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1769439236234",
+      "clientName": "Mileidys Villalobos",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1769451047909",
+      "timestamp": 1769451047909,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.070313,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 6
+        }
+      ],
+      "totalUSD": 0.421878,
+      "totalVES": 149.9999041584,
+      "rateUsed": 355.5528,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 150,
+          "amountInUSD": 0.4218782695565891,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1769451046517",
+      "clientName": "Elianny Figueredo",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1769456429126",
+      "timestamp": 1769456429126,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.070313,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 2
+        }
+      ],
+      "totalUSD": 0.140626,
+      "totalVES": 49.9999680528,
+      "rateUsed": 355.5528,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 50,
+          "amountInUSD": 0.14062608985219635,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769467223446",
+      "timestamp": 1769467223446,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.097513,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 2
+        },
+        {
+          "id": "1768846734077",
+          "name": "impresion foto a5",
+          "priceUSD": 0.55722,
+          "category": "fotografía",
+          "materials": [],
+          "consumption": 0,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.7522460000000001,
+      "totalVES": 269.9996698762,
+      "rateUsed": 358.9247,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 270,
+          "amountInUSD": 0.7522469197578211,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769467949598",
+      "timestamp": 1769467949598,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.083583,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.083583,
+      "totalVES": 30.0000032001,
+      "rateUsed": 358.9247,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 30,
+          "amountInUSD": 0.08358299108420235,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769468140741",
+      "timestamp": 1769468140741,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.083583,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 8
+        }
+      ],
+      "totalUSD": 0.668664,
+      "totalVES": 240.0000256008,
+      "rateUsed": 358.9247,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 240,
+          "amountInUSD": 0.6686639286736188,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1769468136133",
+      "clientName": "luris sifontes",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1769527732446",
+      "timestamp": 1769527732446,
+      "items": [
+        {
+          "id": "1769439150935",
+          "name": "impresion papel stciker",
+          "priceUSD": 0.83583,
+          "category": "General",
+          "materials": [
+            {
+              "inventoryId": "inv_1769439123855",
+              "consumption": 1
+            }
+          ],
+          "inventoryId": "inv_1769439123855",
+          "consumption": 1,
+          "quantity": 4
+        },
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.167166,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 12
+        }
+      ],
+      "totalUSD": 5.349311999999999,
+      "totalVES": 1920.0002048063996,
+      "rateUsed": 358.9247,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 1920,
+          "amountInUSD": 5.34931142938895,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1769439236234",
+      "clientName": "Mileidys Villalobos",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1769534595972",
+      "timestamp": 1769534595972,
+      "items": [
+        {
+          "id": "1768666050886",
+          "name": "Fotografico tipo carta",
+          "priceUSD": 0.83583,
+          "category": "General",
+          "inventoryId": "inv_photo_4x6",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.83583,
+      "totalVES": 300.00003200099997,
+      "rateUsed": 358.9247,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 300,
+          "amountInUSD": 0.8358299108420235
+        }
+      ],
+      "debtPayments": [],
+      "clientName": "milagros",
+      "isPaid": true
+    },
+    {
+      "id": "1769536533326",
+      "timestamp": 1769536533326,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.083583,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 1
+        },
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.139305,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.22288800000000003,
+      "totalVES": 80.00000853360001,
+      "rateUsed": 358.9247,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 80,
+          "amountInUSD": 0.2228879762245396
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769537226414",
+      "timestamp": 1769537226414,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.167166,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 5
+        }
+      ],
+      "totalUSD": 0.8358300000000001,
+      "totalVES": 300.000032001,
+      "rateUsed": 358.9247,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 300,
+          "amountInUSD": 0.8358299108420235,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1769451046517",
+      "clientName": "Elianny Figueredo",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1769556163903",
+      "timestamp": 1769556163902,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.055326,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 1
+        },
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.138316,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.19364199999999998,
+      "totalVES": 69.99976276519999,
+      "rateUsed": 361.4906,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 70,
+          "amountInUSD": 0.19364265626824045,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1769029971460",
+      "clientName": "Gerlys Briceño",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1769556595855",
+      "timestamp": 1769556595855,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.193643,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 3
+        }
+      ],
+      "totalUSD": 0.580929,
+      "totalVES": 210.0003727674,
+      "rateUsed": 361.4906,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 210,
+          "amountInUSD": 0.5809279688047214,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769560073239",
+      "timestamp": 1769560073239,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.3,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.3,
+      "totalVES": 108.44717999999999,
+      "rateUsed": 361.4906,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 108.45,
+          "amountInUSD": 0.30000780103272395
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769614176677",
+      "timestamp": 1769614176677,
+      "items": [
+        {
+          "id": "1769439150935",
+          "name": "impresion papel stciker",
+          "priceUSD": 0.829897,
+          "category": "General",
+          "materials": [
+            {
+              "inventoryId": "inv_1769439123855",
+              "consumption": 1
+            }
+          ],
+          "inventoryId": "inv_1769439123855",
+          "consumption": 1,
+          "quantity": 3
+        },
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.165979,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 9
+        }
+      ],
+      "totalUSD": 3.983502,
+      "totalVES": 1439.9985280812,
+      "rateUsed": 361.4906,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 1440,
+          "amountInUSD": 3.9835060718038036,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769633190557",
+      "timestamp": 1769633190557,
+      "items": [
+        {
+          "id": "1768846734077",
+          "name": "impresion foto a5",
+          "priceUSD": 0.553265,
+          "category": "fotografía",
+          "materials": [],
+          "consumption": 0,
+          "quantity": 1
+        },
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.069158,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 10
+        }
+      ],
+      "totalUSD": 1.244845,
+      "totalVES": 449.99976595699997,
+      "rateUsed": 361.4906,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 450,
+          "amountInUSD": 1.2448456474386886
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769633294831",
+      "timestamp": 1769633294831,
+      "items": [
+        {
+          "id": "1769633258893",
+          "name": "otros",
+          "priceUSD": 0.622423,
+          "category": "General",
+          "materials": [],
+          "consumption": 0,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.622423,
+      "totalVES": 225.00006372379997,
+      "rateUsed": 361.4906,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 225,
+          "amountInUSD": 0.6224228237193443
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769634999237",
+      "timestamp": 1769634999237,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.069158,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 7
+        }
+      ],
+      "totalUSD": 0.484106,
+      "totalVES": 174.99976840359997,
+      "rateUsed": 361.4906,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 175,
+          "amountInUSD": 0.48410664067060116,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1769451046517",
+      "clientName": "Elianny Figueredo",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1769635458836",
+      "timestamp": 1769635458836,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.165979,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.165979,
+      "totalVES": 59.99984829739999,
+      "rateUsed": 361.4906,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 60,
+          "amountInUSD": 0.16597941965849183,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769637218135",
+      "timestamp": 1769637218135,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.069158,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 2
+        }
+      ],
+      "totalUSD": 0.138316,
+      "totalVES": 49.999933829599996,
+      "rateUsed": 361.4906,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 50,
+          "amountInUSD": 0.13831618304874319,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769643048926",
+      "timestamp": 1769643048926,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.138316,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 3
+        }
+      ],
+      "totalUSD": 0.414948,
+      "totalVES": 149.9998014888,
+      "rateUsed": 361.4906,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 150,
+          "amountInUSD": 0.4149485491462296
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769649622678",
+      "timestamp": 1769649622678,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.082494,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.082494,
+      "totalVES": 29.999957776200002,
+      "rateUsed": 363.6623,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 30,
+          "amountInUSD": 0.08249411610716866,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769725909163",
+      "timestamp": 1769725909163,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.164988,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 3
+        },
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.068745,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 6
+        }
+      ],
+      "totalUSD": 0.907434,
+      "totalVES": 329.9995355382,
+      "rateUsed": 363.6623,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 330,
+          "amountInUSD": 0.9074352771788552,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769725929298",
+      "timestamp": 1769725929298,
+      "items": [
+        {
+          "id": "1",
+          "name": "Copia B/N (Carta)",
+          "priceUSD": 0.054996,
+          "category": "Copias",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 4
+        }
+      ],
+      "totalUSD": 0.219984,
+      "totalVES": 79.9998874032,
+      "rateUsed": 363.6623,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 80,
+          "amountInUSD": 0.2199843096191164
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769810618286",
+      "timestamp": 1769810618286,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.067521,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 4
+        }
+      ],
+      "totalUSD": 0.270084,
+      "totalVES": 99.9997893696,
+      "rateUsed": 370.2544,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 100,
+          "amountInUSD": 0.27008456888020776
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769822467219",
+      "timestamp": 1769822467219,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.270085,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.270085,
+      "totalVES": 100.000159624,
+      "rateUsed": 370.2544,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 100,
+          "amountInUSD": 0.27008456888020776,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769870829832",
+      "timestamp": 1769870829832,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.270085,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 3
+        },
+        {
+          "id": "1768666050886",
+          "name": "Fotografico tipo carta",
+          "priceUSD": 0.810254,
+          "category": "General",
+          "inventoryId": "inv_photo_4x6",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 1.6205090000000002,
+      "totalVES": 600.0005874896,
+      "rateUsed": 370.2544,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 600,
+          "amountInUSD": 1.6205074132812467,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1769870822135",
+      "clientName": "Veronica Residencia paraiso",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1769883270908",
+      "timestamp": 1769883270908,
+      "items": [
+        {
+          "id": "1",
+          "name": "Copia B/N (Carta)",
+          "priceUSD": 0.054017,
+          "category": "Copias",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 10
+        }
+      ],
+      "totalUSD": 0.54017,
+      "totalVES": 200.000319248,
+      "rateUsed": 370.2544,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 200,
+          "amountInUSD": 0.5401691377604155
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769894281290",
+      "timestamp": 1769894281290,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.162051,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 18
+        },
+        {
+          "id": "1769439150935",
+          "name": "impresion papel stciker",
+          "priceUSD": 0.810254,
+          "category": "General",
+          "materials": [
+            {
+              "inventoryId": "inv_1769439123855",
+              "consumption": 1
+            }
+          ],
+          "inventoryId": "inv_1769439123855",
+          "consumption": 1,
+          "quantity": 6
+        }
+      ],
+      "totalUSD": 7.778442,
+      "totalVES": 2880.0023756448,
+      "rateUsed": 370.2544,
+      "payments": [
+        {
+          "method": "Fiado / Crédito",
+          "amount": 7.78,
+          "amountInUSD": 7.78
+        }
+      ],
+      "debtPayments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 2880,
+          "amountInUSD": 7.778435583749984,
+          "timestamp": 1769908044447
+        }
+      ],
+      "clientId": "1769439236234",
+      "clientName": "Dileidys Villasmil",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1769895561938",
+      "timestamp": 1769895561938,
+      "items": [
+        {
+          "id": "1768666050886",
+          "name": "Fotografico tipo carta",
+          "priceUSD": 0.810254,
+          "category": "General",
+          "inventoryId": "inv_photo_4x6",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.810254,
+      "totalVES": 300.0001086176,
+      "rateUsed": 370.2544,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 300,
+          "amountInUSD": 0.8102537066406234,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1769895554722",
+      "clientName": "urimare pinto",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1769904581029",
+      "timestamp": 1769904581029,
+      "items": [
+        {
+          "id": "1768666050886",
+          "name": "Fotografico tipo carta",
+          "priceUSD": 0.810254,
+          "category": "General",
+          "inventoryId": "inv_photo_4x6",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.810254,
+      "totalVES": 300.0001086176,
+      "rateUsed": 370.2544,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 300,
+          "amountInUSD": 0.8102537066406234,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientName": "milagros guaros",
+      "isPaid": true
+    },
+    {
+      "id": "1769957878815",
+      "timestamp": 1769957878815,
+      "items": [
+        {
+          "id": "1769957556870",
+          "name": "actualizacion de rif",
+          "priceUSD": 1.5,
+          "category": "General",
+          "materials": [],
+          "consumption": 0,
+          "quantity": 1
+        },
+        {
+          "id": "1769957480391",
+          "name": "Curriculum",
+          "priceUSD": 2.5,
+          "category": "General",
+          "materials": [
+            {
+              "inventoryId": "inv_bond_letter",
+              "consumption": 1
+            }
+          ],
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 1
+        },
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.067521,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 10
+        },
+        {
+          "id": "1769957523990",
+          "name": "referencia personales",
+          "priceUSD": 0.35111,
+          "category": "General",
+          "materials": [],
+          "consumption": 0,
+          "quantity": 2
+        }
+      ],
+      "totalUSD": 5.3774299999999995,
+      "totalVES": 1991.0171181919998,
+      "rateUsed": 370.2544,
+      "payments": [
+        {
+          "method": "Fiado / Crédito",
+          "amount": 5.38,
+          "amountInUSD": 5.38
+        }
+      ],
+      "debtPayments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 1000,
+          "amountInUSD": 2.687408443353595,
+          "timestamp": 1770152858284
+        },
+        {
+          "method": "Pago Móvil",
+          "amount": 1000,
+          "amountInUSD": 2.6422997308553495,
+          "timestamp": 1770254530549
+        }
+      ],
+      "clientId": "1769468136133",
+      "clientName": "Lureidis Sifontes",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1769983476297",
+      "timestamp": 1769983476297,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.067521,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 5
+        }
+      ],
+      "totalUSD": 0.337605,
+      "totalVES": 124.99973671199999,
+      "rateUsed": 370.2544,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 125,
+          "amountInUSD": 0.3376057111002597,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769990493210",
+      "timestamp": 1769990493210,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.135042,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.135042,
+      "totalVES": 49.9998946848,
+      "rateUsed": 370.2544,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 50,
+          "amountInUSD": 0.13504228444010388
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769991767395",
+      "timestamp": 1769991767395,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.216068,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.216068,
+      "totalVES": 80.0001276992,
+      "rateUsed": 370.2544,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 80,
+          "amountInUSD": 0.21606765510416623
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1769997644701",
+      "timestamp": 1769997644701,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.054017,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 8
+        }
+      ],
+      "totalUSD": 0.432136,
+      "totalVES": 160.0002553984,
+      "rateUsed": 370.2544,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 160,
+          "amountInUSD": 0.43213531020833246,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1769437234952",
+      "clientName": "Clemen Salazar",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1770051907304",
+      "timestamp": 1770051907304,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.189059,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 3
+        },
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.054017,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.621194,
+      "totalVES": 229.9998117536,
+      "rateUsed": 370.2544,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 230,
+          "amountInUSD": 0.6211945084244779
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1770051904783",
+      "clientName": "yormary guaros",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1770063337758",
+      "timestamp": 1770063337758,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.081025,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 7
+        }
+      ],
+      "totalUSD": 0.567175,
+      "totalVES": 209.99903931999998,
+      "rateUsed": 370.2544,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 210,
+          "amountInUSD": 0.5671775946484363,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1768784085346",
+      "clientName": "Magdiolis Ramírez",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1770069754624",
+      "timestamp": 1770069754624,
+      "items": [
+        {
+          "id": "1768827267007",
+          "name": "oficio impresion",
+          "priceUSD": 0.081025,
+          "category": "General",
+          "inventoryId": "inv_bond_legal",
+          "consumption": 0,
+          "quantity": 24
+        }
+      ],
+      "totalUSD": 1.9445999999999999,
+      "totalVES": 719.9967062399999,
+      "rateUsed": 370.2544,
+      "payments": [
+        {
+          "method": "Fiado / Crédito",
+          "amount": 1.94,
+          "amountInUSD": 1.94
+        }
+      ],
+      "debtPayments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 720,
+          "amountInUSD": 1.9349340792145886,
+          "timestamp": 1770081377007
+        }
+      ],
+      "clientId": "1770069708160",
+      "clientName": "uvi caraballo",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1770072891281",
+      "timestamp": 1770072891281,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.270085,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 2
+        }
+      ],
+      "totalUSD": 0.54017,
+      "totalVES": 200.000319248,
+      "rateUsed": 370.2544,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 200,
+          "amountInUSD": 0.5401691377604155
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1770077764894",
+      "timestamp": 1770077764894,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.053748,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 12
+        }
+      ],
+      "totalUSD": 0.644976,
+      "totalVES": 239.9992459632,
+      "rateUsed": 372.1057,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 240,
+          "amountInUSD": 0.6449780264048629,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1770077761110",
+      "clientName": "Taili Rojas",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1770081228136",
+      "timestamp": 1770081228136,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.13437,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 2
+        }
+      ],
+      "totalUSD": 0.26874,
+      "totalVES": 99.99968581799999,
+      "rateUsed": 372.1057,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 100,
+          "amountInUSD": 0.26874084433535955
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1770085752145",
+      "timestamp": 1770085752145,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.067185,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 6
+        }
+      ],
+      "totalUSD": 0.40310999999999997,
+      "totalVES": 149.99952872699998,
+      "rateUsed": 372.1057,
+      "payments": [
+        {
+          "method": "Fiado / Crédito",
+          "amount": 0.4,
+          "amountInUSD": 0.4
+        }
+      ],
+      "debtPayments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 150,
+          "amountInUSD": 0.3920217817755869,
+          "timestamp": 1770496704986
+        }
+      ],
+      "clientName": "truco",
+      "isPaid": true
+    },
+    {
+      "id": "1770123118062",
+      "timestamp": 1770123118062,
+      "items": [
+        {
+          "id": "1769439150935",
+          "name": "impresion papel stciker",
+          "priceUSD": 0.806223,
+          "category": "General",
+          "materials": [
+            {
+              "inventoryId": "inv_1769439123855",
+              "consumption": 1
+            }
+          ],
+          "inventoryId": "inv_1769439123855",
+          "consumption": 1,
+          "quantity": 2
+        },
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.161245,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 12
+        }
+      ],
+      "totalUSD": 3.5473860000000004,
+      "totalVES": 1320.0025507002001,
+      "rateUsed": 372.1057,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 1320,
+          "amountInUSD": 3.547379145226746,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1769439236234",
+      "clientName": "Dileidys Villasmil",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1770153976079",
+      "timestamp": 1770153976079,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.13437,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 4
+        }
+      ],
+      "totalUSD": 0.53748,
+      "totalVES": 199.99937163599998,
+      "rateUsed": 372.1057,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 200,
+          "amountInUSD": 0.5374816886707191
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1770154009879",
+      "timestamp": 1770154009879,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.053748,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 4
+        }
+      ],
+      "totalUSD": 0.214992,
+      "totalVES": 79.9997486544,
+      "rateUsed": 372.1057,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 80,
+          "amountInUSD": 0.21499267546828763
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1770162001294",
+      "timestamp": 1770162001294,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.13437,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 4
+        }
+      ],
+      "totalUSD": 0.53748,
+      "totalVES": 199.99937163599998,
+      "rateUsed": 372.1057,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 200,
+          "amountInUSD": 0.5374816886707191
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1770212782032",
+      "timestamp": 1770212782032,
+      "items": [
+        {
+          "id": "1",
+          "name": "Copia B/N (Carta)",
+          "priceUSD": 0.053322,
+          "category": "Copias",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 2
+        }
+      ],
+      "totalUSD": 0.106644,
+      "totalVES": 40.00029813,
+      "rateUsed": 375.0825,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 40,
+          "amountInUSD": 0.10664320516153114
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1770254278861",
+      "timestamp": 1770254278861,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.198172,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 4
+        },
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.079269,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 3
+        }
+      ],
+      "totalUSD": 1.030495,
+      "totalVES": 389.99928280899996,
+      "rateUsed": 378.4582,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 390,
+          "amountInUSD": 1.0304968950335864,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1770254313657",
+      "timestamp": 1770254313656,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.158538,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.158538,
+      "totalVES": 60.0000061116,
+      "rateUsed": 378.4582,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 60,
+          "amountInUSD": 0.15853798385132098,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1769029971460",
+      "clientName": "Gerlys Briceño",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1770466852988",
+      "timestamp": 1770466852988,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.313617,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 6
+        }
+      ],
+      "totalUSD": 1.8817019999999998,
+      "totalVES": 719.9990233235999,
+      "rateUsed": 382.6318,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 720,
+          "amountInUSD": 1.8817045525228169,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1770466847676",
+      "clientName": "jose aray",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1770466967052",
+      "timestamp": 1770466967052,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.05227,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 13
+        }
+      ],
+      "totalUSD": 0.67951,
+      "totalVES": 260.00213441799997,
+      "rateUsed": 382.6318,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 260,
+          "amountInUSD": 0.6795044217443506,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1770466963164",
+      "clientName": "lixa ",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1770496501835",
+      "timestamp": 1770496501835,
+      "items": [
+        {
+          "id": "1",
+          "name": "Copia B/N (Carta)",
+          "priceUSD": 0.05227,
+          "category": "Copias",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 5
+        }
+      ],
+      "totalUSD": 0.26134999999999997,
+      "totalVES": 100.00082092999999,
+      "rateUsed": 382.6318,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 100,
+          "amountInUSD": 0.2613478545170579
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1770496678075",
+      "timestamp": 1770496678075,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.065337,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 8
+        }
+      ],
+      "totalUSD": 0.522696,
+      "totalVES": 200.00011133280003,
+      "rateUsed": 382.6318,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 200,
+          "amountInUSD": 0.5226957090341158,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1770496639587",
+      "clientName": "truco",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1770502812594",
+      "timestamp": 1770502812594,
+      "items": [
+        {
+          "id": "1768666050886",
+          "name": "Fotografico tipo carta",
+          "priceUSD": 0.784044,
+          "category": "General",
+          "inventoryId": "inv_photo_4x6",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.784044,
+      "totalVES": 300.00016699919996,
+      "rateUsed": 382.6318,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 50,
+          "amountInUSD": 0.13067392725852894,
+          "reference": ""
+        },
+        {
+          "method": "Efectivo Bs",
+          "amount": 250,
+          "amountInUSD": 0.6533696362926448
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1770591473202",
+      "timestamp": 1770591473202,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.065337,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 4
+        }
+      ],
+      "totalUSD": 0.261348,
+      "totalVES": 100.00005566640002,
+      "rateUsed": 382.6318,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 100,
+          "amountInUSD": 0.2613478545170579
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1770593181635",
+      "timestamp": 1770593181635,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.130674,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 45
+        },
+        {
+          "id": "1769439150935",
+          "name": "impresion papel stciker",
+          "priceUSD": 0.65337,
+          "category": "General",
+          "materials": [
+            {
+              "inventoryId": "inv_1769439123855",
+              "consumption": 1
+            }
+          ],
+          "inventoryId": "inv_1769439123855",
+          "consumption": 1,
+          "quantity": 15
+        }
+      ],
+      "totalUSD": 15.68088,
+      "totalVES": 6000.003339984,
+      "rateUsed": 382.6318,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 6000,
+          "amountInUSD": 15.680871271023475
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1769439236234",
+      "clientName": "Dileidys Villasmil",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1770594724916",
+      "timestamp": 1770594724916,
+      "items": [
+        {
+          "id": "1",
+          "name": "Copia B/N (Carta)",
+          "priceUSD": 0.065337,
+          "category": "Copias",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 3
+        }
+      ],
+      "totalUSD": 0.19601100000000002,
+      "totalVES": 75.0000417498,
+      "rateUsed": 382.6318,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 75,
+          "amountInUSD": 0.19601089088779344,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1770594947364",
+      "timestamp": 1770594947364,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.065337,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 8
+        }
+      ],
+      "totalUSD": 0.522696,
+      "totalVES": 200.00011133280003,
+      "rateUsed": 382.6318,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 200,
+          "amountInUSD": 0.5226957090341158
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1770601415375",
+      "timestamp": 1770601415375,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.156809,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.156809,
+      "totalVES": 60.000109926200004,
+      "rateUsed": 382.6318,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 60,
+          "amountInUSD": 0.15680871271023475
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1771097911750",
+      "timestamp": 1771097911750,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.063073,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 40
+        }
+      ],
+      "totalUSD": 2.52292,
+      "totalVES": 1000.003240808,
+      "rateUsed": 396.3674,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 1000,
+          "amountInUSD": 2.5229118237271786
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1771202075758",
+      "timestamp": 1771202075758,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.201833,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 8
+        }
+      ],
+      "totalUSD": 1.614664,
+      "totalVES": 640.0001715536,
+      "rateUsed": 396.3674,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 640,
+          "amountInUSD": 1.6146635671853942,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientName": "aleidys",
+      "isPaid": true
+    },
+    {
+      "id": "1771266867955",
+      "timestamp": 1771266867955,
+      "items": [
+        {
+          "id": "1",
+          "name": "Copia B/N (Carta)",
+          "priceUSD": 0.1,
+          "category": "Copias",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.1,
+      "totalVES": 39.63674,
+      "rateUsed": 396.3674,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 39.64,
+          "amountInUSD": 0.10000822469254536
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1771441640687",
+      "timestamp": 1771441640687,
+      "items": [
+        {
+          "id": "1",
+          "name": "Copia B/N (Carta)",
+          "priceUSD": 0.050458,
+          "category": "Copias",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 5
+        }
+      ],
+      "totalUSD": 0.25229,
+      "totalVES": 99.999531346,
+      "rateUsed": 396.3674,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 100,
+          "amountInUSD": 0.25229118237271786
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1771441658814",
+      "timestamp": 1771441658814,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.151375,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.151375,
+      "totalVES": 60.000115175,
+      "rateUsed": 396.3674,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 60,
+          "amountInUSD": 0.1513747094236307
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1771443651095",
+      "timestamp": 1771443651095,
+      "items": [
+        {
+          "id": "1771443497159",
+          "name": "foto polaroid pequeña",
+          "priceUSD": 0.302749,
+          "category": "General",
+          "materials": [],
+          "consumption": 0,
+          "quantity": 12
+        }
+      ],
+      "totalUSD": 3.632988,
+      "totalVES": 1439.9980077912,
+      "rateUsed": 396.3674,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 1440,
+          "amountInUSD": 3.6329930261671373,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1771443639630",
+      "clientName": "Emily Almeida",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1771548121008",
+      "timestamp": 1771548121008,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.24855,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 2
+        }
+      ],
+      "totalUSD": 0.4971,
+      "totalVES": 200.00038053,
+      "rateUsed": 402.3343,
+      "payments": [
+        {
+          "method": "Efectivo Bs",
+          "amount": 200,
+          "amountInUSD": 0.4970990541944846
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1771548143600",
+      "timestamp": 1771548143600,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.062137,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 15
+        }
+      ],
+      "totalUSD": 0.932055,
+      "totalVES": 374.9976959865,
+      "rateUsed": 402.3343,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 375,
+          "amountInUSD": 0.9320607266146586,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1771554272769",
+      "timestamp": 1771554272769,
+      "items": [
+        {
+          "id": "1769957480391",
+          "name": "Curriculum",
+          "priceUSD": 1.491297,
+          "category": "General",
+          "materials": [
+            {
+              "inventoryId": "inv_bond_letter",
+              "consumption": 1
+            }
+          ],
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 1.491297,
+      "totalVES": 599.9999345871,
+      "rateUsed": 402.3343,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 600,
+          "amountInUSD": 1.4912971625834537,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1771597236535",
+      "timestamp": 1771597236535,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.062137,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 51
+        }
+      ],
+      "totalUSD": 3.168987,
+      "totalVES": 1274.9921663541,
+      "rateUsed": 402.3343,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 1275,
+          "amountInUSD": 3.169006470489839,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1771597222414",
+      "clientName": "Marielena Rodriguez",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1771629242692",
+      "timestamp": 1771629242692,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.062137,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 5
+        }
+      ],
+      "totalUSD": 0.310685,
+      "totalVES": 124.9992319955,
+      "rateUsed": 402.3343,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 125,
+          "amountInUSD": 0.31068690887155287,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1770466963164",
+      "clientName": "lixa ",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1771701696503",
+      "timestamp": 1771701696503,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.061675,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 19
+        }
+      ],
+      "totalUSD": 1.1718250000000001,
+      "totalVES": 475.0013730350001,
+      "rateUsed": 405.3518,
+      "payments": [
+        {
+          "method": "Fiado / Crédito",
+          "amount": 1.17,
+          "amountInUSD": 1.17
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1771701693359",
+      "clientName": "camila los guaros",
+      "clientDoc": "",
+      "isPaid": false
+    },
+    {
+      "id": "1771701729767",
+      "timestamp": 1771701729767,
+      "items": [
+        {
+          "id": "1768666050886",
+          "name": "Fotografico tipo carta",
+          "priceUSD": 0.863448,
+          "category": "General",
+          "inventoryId": "inv_photo_4x6",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.863448,
+      "totalVES": 350.0002010064,
+      "rateUsed": 405.3518,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 350,
+          "amountInUSD": 0.8634475041186446,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1771701925847",
+      "timestamp": 1771701925847,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.061675,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 60
+        }
+      ],
+      "totalUSD": 3.7005,
+      "totalVES": 1500.0043359000001,
+      "rateUsed": 405.3518,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 1500,
+          "amountInUSD": 3.7004893033656194,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1771597222414",
+      "clientName": "Marielena Rodriguez",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1771776545704",
+      "timestamp": 1771776545704,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.04934,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 225
+        }
+      ],
+      "totalUSD": 11.1015,
+      "totalVES": 4500.0130077,
+      "rateUsed": 405.3518,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 4500.01,
+          "amountInUSD": 11.101492580025548,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1771776540752",
+      "clientName": "Carlos Guzman",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1771792372854",
+      "timestamp": 1771792372854,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.061675,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 3
+        }
+      ],
+      "totalUSD": 0.185025,
+      "totalVES": 75.000216795,
+      "rateUsed": 405.3518,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 75,
+          "amountInUSD": 0.18502446516828097,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1769029971460",
+      "clientName": "Gerlys Briceño",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1771799173878",
+      "timestamp": 1771799173878,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.061675,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 2
+        }
+      ],
+      "totalUSD": 0.12335,
+      "totalVES": 50.00014453000001,
+      "rateUsed": 405.3518,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 50,
+          "amountInUSD": 0.12334964344552064,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1769029971460",
+      "clientName": "Gerlys Briceño",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1771799790062",
+      "timestamp": 1771799790062,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.061675,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 51
+        }
+      ],
+      "totalUSD": 3.145425,
+      "totalVES": 1275.0036855150001,
+      "rateUsed": 405.3518,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 1275,
+          "amountInUSD": 3.1454159078607766,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1771597222414",
+      "clientName": "Marielena Rodriguez",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1771804534272",
+      "timestamp": 1771804534272,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.209694,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 4
+        }
+      ],
+      "totalUSD": 0.838776,
+      "totalVES": 339.9993613968,
+      "rateUsed": 405.3518,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 340,
+          "amountInUSD": 0.8387775754295405,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1771853783289",
+      "timestamp": 1771853783289,
+      "items": [
+        {
+          "id": "1771853626457",
+          "name": "impresion foto tipo carnet",
+          "priceUSD": 0.986797,
+          "category": "General",
+          "materials": [
+            {
+              "inventoryId": "inv_photo_4x6",
+              "consumption": 1
+            }
+          ],
+          "inventoryId": "inv_photo_4x6",
+          "consumption": 1,
+          "quantity": 1
+        },
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.222029,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "materials": [
+            {
+              "inventoryId": "inv_bond_letter",
+              "consumption": 1
+            }
+          ],
+          "quantity": 4
+        },
+        {
+          "id": "1768754171997",
+          "name": "plastificacion carnet",
+          "priceUSD": 0.370049,
+          "category": "General",
+          "inventoryId": "inv_1768754087396",
+          "consumption": 1,
+          "quantity": 2
+        }
+      ],
+      "totalUSD": 2.615011,
+      "totalVES": 1059.9994158698,
+      "rateUsed": 405.3518,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 1060,
+          "amountInUSD": 2.615012441045038,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1771853774849",
+      "clientName": "luz ",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1771858103483",
+      "timestamp": 1771858103483,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.07401,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 3
+        }
+      ],
+      "totalUSD": 0.22203,
+      "totalVES": 90.000260154,
+      "rateUsed": 405.3518,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 90,
+          "amountInUSD": 0.22202935820193717,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1771881570582",
+      "timestamp": 1771881570582,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.12335,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "materials": [
+            {
+              "inventoryId": "inv_bond_letter",
+              "consumption": 1
+            }
+          ],
+          "quantity": 12
+        }
+      ],
+      "totalUSD": 1.4802,
+      "totalVES": 600.00173436,
+      "rateUsed": 405.3518,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 600,
+          "amountInUSD": 1.4801957213462478,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1771881621502",
+      "timestamp": 1771881621502,
+      "items": [
+        {
+          "id": "3",
+          "name": "Impresión B/N",
+          "priceUSD": 0.061675,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "quantity": 3
+        }
+      ],
+      "totalUSD": 0.185025,
+      "totalVES": 75.000216795,
+      "rateUsed": 405.3518,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 75,
+          "amountInUSD": 0.18502446516828097,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1768846836725",
+      "clientName": "Anahica tovar",
+      "clientDoc": "",
+      "isPaid": true
+    },
+    {
+      "id": "1772059627088",
+      "timestamp": 1772059627088,
+      "items": [
+        {
+          "id": "1768666050886",
+          "name": "Fotografico tipo carta",
+          "priceUSD": 0.845318,
+          "category": "General",
+          "inventoryId": "inv_photo_4x6",
+          "consumption": 1,
+          "quantity": 1
+        }
+      ],
+      "totalUSD": 0.845318,
+      "totalVES": 350.000113969,
+      "rateUsed": 414.0455,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 350,
+          "amountInUSD": 0.8453177247428121,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1772136896693",
+      "timestamp": 1772136896693,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.241519,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "materials": [
+            {
+              "inventoryId": "inv_bond_letter",
+              "consumption": 1
+            }
+          ],
+          "quantity": 2
+        }
+      ],
+      "totalUSD": 0.483038,
+      "totalVES": 199.99971022900002,
+      "rateUsed": 414.0455,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 200,
+          "amountInUSD": 0.4830386998530355,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "isPaid": true
+    },
+    {
+      "id": "1772143471288",
+      "timestamp": 1772143471288,
+      "items": [
+        {
+          "id": "4",
+          "name": "Impresión Color",
+          "priceUSD": 0.169064,
+          "category": "Impresión",
+          "inventoryId": "inv_bond_letter",
+          "consumption": 1,
+          "materials": [
+            {
+              "inventoryId": "inv_bond_letter",
+              "consumption": 1
+            }
+          ],
+          "quantity": 12
+        }
+      ],
+      "totalUSD": 2.028768,
+      "totalVES": 840.002260944,
+      "rateUsed": 414.0455,
+      "payments": [
+        {
+          "method": "Pago Móvil",
+          "amount": 840,
+          "amountInUSD": 2.028762539382749,
+          "reference": ""
+        }
+      ],
+      "debtPayments": [],
+      "clientId": "1769439236234",
+      "clientName": "Dileidys Villasmil",
+      "clientDoc": "",
+      "isPaid": true
+    }
+  ],
+  "expenses": [
+    {
+      "id": "1768851017188",
+      "description": "Tintas amarilla y cian (Bs.3480)",
+      "amountUSD": 10.101388331329021,
+      "amountPaid": 3480,
+      "category": "Gasto",
+      "timestamp": 1768851000000,
+      "accountId": "acc_bank_ves"
+    },
+    {
+      "id": "1769438076584",
+      "description": "kit de mantenimiento de impresora (Bs.3160)",
+      "amountUSD": 8.88756887865881,
+      "amountPaid": 3160,
+      "category": "Gasto",
+      "timestamp": 1769438040000,
+      "accountId": "acc_bank_ves"
+    },
+    {
+      "id": "1769633232093",
+      "description": "carpeta (Bs.225)",
+      "amountUSD": 0.6224228237193443,
+      "amountPaid": 225,
+      "category": "Gasto",
+      "timestamp": 1769633220000,
+      "accountId": "acc_bank_ves"
+    },
+    {
+      "id": "1769708169007",
+      "description": "hojas tipo carta  (Bs.2364)",
+      "amountUSD": 6.50053634924489,
+      "amountPaid": 2364,
+      "category": "Gasto",
+      "timestamp": 1769708160000,
+      "accountId": "acc_bank_ves"
+    },
+    {
+      "id": "1769708199182",
+      "description": "papel fotografico (Bs.993)",
+      "amountUSD": 2.7305552431472826,
+      "amountPaid": 993,
+      "category": "Gasto",
+      "timestamp": 1769708199182,
+      "accountId": "acc_bank_ves"
+    },
+    {
+      "id": "1769708234664",
+      "description": "papel de sticker (Bs.1025.52)",
+      "amountUSD": 2.819978865007453,
+      "amountPaid": 1025.52,
+      "category": "Gasto",
+      "timestamp": 1769708234664,
+      "accountId": "acc_bank_ves"
+    },
+    {
+      "id": "1769708264622",
+      "description": "pasaje  (Bs.200)",
+      "amountUSD": 0.549960774047791,
+      "amountPaid": 200,
+      "category": "Gasto",
+      "timestamp": 1769708264622,
+      "accountId": "acc_cash_ves"
+    },
+    {
+      "id": "1770254206797",
+      "description": "emergencia (Bs.2000)",
+      "amountUSD": 5.284599461710699,
+      "amountPaid": 2000,
+      "category": "Gasto",
+      "timestamp": 1770254160000,
+      "accountId": "acc_bank_ves"
+    },
+    {
+      "id": "1770591399962",
+      "description": "renta (Bs.1600)",
+      "amountUSD": 4.181565672272926,
+      "amountPaid": 1600,
+      "category": "Gasto",
+      "timestamp": 1770591399962,
+      "accountId": "acc_bank_ves"
+    },
+    {
+      "id": "1770591421913",
+      "description": "alimento (Bs.200)",
+      "amountUSD": 0.5226957090341158,
+      "amountPaid": 200,
+      "category": "Gasto",
+      "timestamp": 1770591421913,
+      "accountId": "acc_bank_ves"
+    },
+    {
+      "id": "1770601379919",
+      "description": "dulce (Bs.100)",
+      "amountUSD": 0.2613478545170579,
+      "amountPaid": 100,
+      "category": "Gasto",
+      "timestamp": 1770601379919,
+      "accountId": "acc_bank_ves"
+    },
+    {
+      "id": "1770924513712",
+      "description": "pago a luis  (Bs.3000)",
+      "amountUSD": 7.686505366205613,
+      "amountPaid": 3000,
+      "category": "Gasto",
+      "timestamp": 1770924513712,
+      "accountId": "acc_cash_ves"
+    },
+    {
+      "id": "1771288997590",
+      "description": "hojas carta (Bs.2600)",
+      "amountUSD": 6.559570741690664,
+      "amountPaid": 2600,
+      "category": "Gasto",
+      "timestamp": 1771288997590,
+      "accountId": "acc_cash_ves"
+    },
+    {
+      "id": "1771776578592",
+      "description": "hoja carta (Bs.2500)",
+      "amountUSD": 6.167482172276032,
+      "amountPaid": 2500,
+      "category": "Gasto",
+      "timestamp": 1771776578592,
+      "accountId": "acc_bank_ves"
+    },
+    {
+      "id": "1771776605344",
+      "description": "grapadora (Bs.600)",
+      "amountUSD": 1.4801957213462478,
+      "amountPaid": 600,
+      "category": "Gasto",
+      "timestamp": 1771776605344,
+      "accountId": "acc_bank_ves"
+    },
+    {
+      "id": "1771776649544",
+      "description": "papel de foto a4 (Bs.1200)",
+      "amountUSD": 2.9603914426924955,
+      "amountPaid": 1200,
+      "category": "Gasto",
+      "timestamp": 1771776649544,
+      "accountId": "acc_bank_ves"
+    },
+    {
+      "id": "1771776725952",
+      "description": "pasaje (Bs.278)",
+      "amountUSD": 0.6858240175570948,
+      "amountPaid": 278,
+      "category": "Gasto",
+      "timestamp": 1771776725952,
+      "accountId": "acc_cash_ves"
+    },
+    {
+      "id": "1772059485312",
+      "description": "pasaje (Bs.600)",
+      "amountUSD": 1.4491160995591064,
+      "amountPaid": 600,
+      "category": "Gasto",
+      "timestamp": 1771886640000,
+      "accountId": "acc_cash_ves"
+    },
+    {
+      "id": "1772059515800",
+      "description": "gastos comida (Bs.2000)",
+      "amountUSD": 4.830386998530355,
+      "amountPaid": 2000,
+      "category": "Gasto",
+      "timestamp": 1772059515800,
+      "accountId": "acc_bank_ves"
+    }
+  ],
+  "rates": {
+    "bcv": 417.3579,
+    "parallel": 512,
+    "selected": "BCV"
+  },
+  "accounts": [
+    {
+      "id": "acc_cash_usd",
+      "name": "Caja Fuerte (USD)",
+      "type": "USD",
+      "balance": 0,
+      "methodKey": "Efectivo USD"
+    },
+    {
+      "id": "acc_cash_ves",
+      "name": "Caja Chica (Bs)",
+      "type": "VES",
+      "balance": 5400.09,
+      "methodKey": "Efectivo Bs"
+    },
+    {
+      "id": "acc_bank_ves",
+      "name": "Banco / Pago Móvil",
+      "type": "VES",
+      "balance": 2431.941139999999,
+      "methodKey": "Pago Móvil"
+    },
+    {
+      "id": "acc_binance",
+      "name": "Binance (USDT)",
+      "type": "USD",
+      "balance": 37.279149450968994,
+      "methodKey": "Binance USDT"
+    }
+  ],
+  "transfers": [
+    {
+      "id": "1771531445787",
+      "timestamp": 1771531445787,
+      "fromAccountId": "acc_bank_ves",
+      "toAccountId": "acc_binance",
+      "amountFrom": 10000,
+      "amountTo": 25.078646635850024,
+      "rateUsed": 398.7456,
+      "feeAmount": 300,
+      "feeCurrency": "VES"
+    },
+    {
+      "id": "1771881491902",
+      "timestamp": 1771881491000,
+      "fromAccountId": "acc_bank_ves",
+      "toAccountId": "acc_binance",
+      "amountFrom": 5600,
+      "amountTo": 10,
+      "rateUsed": 560,
+      "feeAmount": 10,
+      "feeCurrency": "VES",
+      "note": "gasto comida "
+    },
+    {
+      "id": "1772065882803",
+      "timestamp": 1772065882803,
+      "fromAccountId": "acc_binance",
+      "toAccountId": "acc_bank_ves",
+      "amountFrom": 25.08,
+      "amountTo": 10384.261139999999,
+      "rateUsed": 414.0455,
+      "feeCurrency": "USD",
+      "note": "arreglo"
+    },
+    {
+      "id": "1772066000058",
+      "timestamp": 1772066000000,
+      "fromAccountId": "acc_bank_ves",
+      "toAccountId": "acc_binance",
+      "amountFrom": 10384.26,
+      "amountTo": 17.27830282861897,
+      "rateUsed": 601,
+      "feeCurrency": "USD",
+      "note": "arreglo "
+    }
+  ],
+  "clients": [
+    {
+      "id": "1768613722968",
+      "name": "yenifer centeno",
+      "docId": "",
+      "phone": ""
+    },
+    {
+      "id": "1768753603700",
+      "name": "Mary hernandez",
+      "docId": "",
+      "phone": ""
+    },
+    {
+      "id": "1768784085346",
+      "name": "Magdiolis Ramírez",
+      "docId": "",
+      "phone": ""
+    },
+    {
+      "id": "1768846836725",
+      "name": "Anahica tovar",
+      "docId": "",
+      "phone": ""
+    },
+    {
+      "id": "1769029971460",
+      "name": "Gerlys Briceño",
+      "docId": "",
+      "phone": ""
+    },
+    {
+      "id": "1769383081894",
+      "name": "leonibel guaros",
+      "docId": "",
+      "phone": ""
+    },
+    {
+      "id": "1769437234952",
+      "name": "Clemen Salazar",
+      "docId": "",
+      "phone": ""
+    },
+    {
+      "id": "1769439236234",
+      "name": "Dileidys Villasmil",
+      "docId": "",
+      "phone": ""
+    },
+    {
+      "id": "1769451046517",
+      "name": "Elianny Figueredo",
+      "docId": "",
+      "phone": ""
+    },
+    {
+      "id": "1769468136133",
+      "name": "Lureidis Sifontes",
+      "docId": "",
+      "phone": ""
+    },
+    {
+      "id": "1769870822135",
+      "name": "Veronica Residencia paraiso",
+      "docId": "",
+      "phone": ""
+    },
+    {
+      "id": "1769895554722",
+      "name": "Urimare Pinto",
+      "docId": "",
+      "phone": ""
+    },
+    {
+      "id": "1770051904783",
+      "name": "yormary guaros",
+      "docId": "",
+      "phone": ""
+    },
+    {
+      "id": "1770069708160",
+      "name": "uvi caraballo",
+      "docId": "",
+      "phone": ""
+    },
+    {
+      "id": "1770077761110",
+      "name": "Taili Rojas",
+      "docId": "",
+      "phone": ""
+    },
+    {
+      "id": "1770466847676",
+      "name": "jose aray",
+      "docId": "",
+      "phone": ""
+    },
+    {
+      "id": "1770466963164",
+      "name": "lixa ",
+      "docId": "",
+      "phone": ""
+    },
+    {
+      "id": "1770496639587",
+      "name": "truco",
+      "docId": "",
+      "phone": ""
+    },
+    {
+      "id": "1771443639630",
+      "name": "Emily Almeida",
+      "docId": "",
+      "phone": ""
+    },
+    {
+      "id": "1771597222414",
+      "name": "Marielena Rodriguez",
+      "docId": "",
+      "phone": ""
+    },
+    {
+      "id": "1771701693359",
+      "name": "camila los guaros",
+      "docId": "",
+      "phone": ""
+    },
+    {
+      "id": "1771776540752",
+      "name": "Carlos Guzman",
+      "docId": "",
+      "phone": ""
+    },
+    {
+      "id": "1771853774849",
+      "name": "luz ",
+      "docId": "",
+      "phone": ""
+    }
+  ],
+  "settings": {
+    "lastBackup": 1771881571602
+  },
+  "exportDate": 1772159706735,
+  "version": "1.4"
+}
