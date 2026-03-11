@@ -11,7 +11,7 @@ import { ProductManager } from './components/ProductManager';
 import { GlobalSearchModal } from './components/GlobalSearchModal';
 import { Receipt } from './components/Receipt';
 import { PinModal } from './components/PinModal';
-import { Plus, Minus, Trash2, Settings, BarChart2, RefreshCw, Package, Check, Edit, Save, X, DownloadCloud, Moon, Sun, Loader2, AlertTriangle, Search, ShoppingCart, ArrowRight, LogOut } from 'lucide-react';
+import { Plus, Minus, Trash2, Settings, BarChart2, RefreshCw, Package, Check, Edit, Save, X, DownloadCloud, Moon, Sun, Loader2, AlertTriangle, Search, ShoppingCart, ArrowRight, ArrowLeft, LogOut } from 'lucide-react';
 import { useAuth } from './services/auth';
 import { Login } from './components/Login';
 import { migrateDataToSupabase } from './services/migration';
@@ -200,6 +200,12 @@ const App: React.FC = () => {
   const [expenses, setExpenses] = useState<Expense[]>([]);
   const [transfers, setTransfers] = useState<Transfer[]>([]);
   const [settings, setSettings] = useState<AppSettings>({});
+  
+  // Mobile UI States
+  const [mobileView, setMobileView] = useState<'landing' | 'pos'>('landing');
+  const [mobileTab, setMobileTab] = useState<'products' | 'cart'>('products');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [loadingRate, setLoadingRate] = useState(false);
   
   // Theme State
@@ -384,9 +390,16 @@ const App: React.FC = () => {
   }, [products]);
   const [categoryFilter, setCategoryFilter] = useState<string>('Todas');
   const filteredProducts = useMemo(() => {
-    if (categoryFilter === 'Todas') return products;
-    return products.filter(p => p.category === categoryFilter);
-  }, [products, categoryFilter]);
+    let result = products;
+    if (categoryFilter !== 'Todas') {
+      result = result.filter(p => p.category === categoryFilter);
+    }
+    if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase();
+      result = result.filter(p => p.name.toLowerCase().includes(q) || p.category.toLowerCase().includes(q));
+    }
+    return result;
+  }, [products, categoryFilter, searchQuery]);
 
   // Inventory Quick View
   const lowStockItem = useMemo(() => {
@@ -983,6 +996,11 @@ const App: React.FC = () => {
       <header className="bg-white dark:bg-gray-800 shadow-md z-10 no-print border-b border-gray-200 dark:border-gray-700 transition-colors duration-200">
         <div className="max-w-7xl mx-auto px-4 py-2 sm:py-3 flex justify-between items-center gap-2">
           <div className="flex items-center space-x-2 shrink-0">
+            {isMobile && mobileView !== 'landing' && (
+                <button onClick={() => setMobileView('landing')} className="p-2 -ml-2 text-gray-400 hover:text-primary transition-colors">
+                    <ArrowLeft size={20} />
+                </button>
+            )}
             <div className="bg-primary text-white p-1.5 sm:p-2 rounded-lg font-bold text-lg sm:text-xl shadow-lg shadow-blue-500/30">SD</div>
             <h1 className="text-xl font-bold text-gray-800 dark:text-white hidden sm:block">SerendipiAPP</h1>
           </div>
@@ -1074,85 +1092,185 @@ const App: React.FC = () => {
 
       {/* --- Main Content --- */}
       <main className="flex-1 flex flex-col md:flex-row overflow-hidden no-print relative">
-        
-        {/* Left: Product Grid */}
-        <div className="flex-1 overflow-y-auto p-2 sm:p-4 bg-gray-100/50 dark:bg-gray-900 pb-24 md:pb-4">
-          <div className="flex gap-2 mb-2 overflow-x-auto no-scrollbar">
-            <button onClick={() => setCategoryFilter('Todas')} className={`px-3 py-1 rounded-full text-xs font-bold ${categoryFilter === 'Todas' ? 'bg-primary text-white' : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700'}`}>Todas</button>
-            {categories.map(cat => (
-              <button key={cat} onClick={() => setCategoryFilter(cat)} className={`px-3 py-1 rounded-full text-xs font-bold ${categoryFilter === cat ? 'bg-primary text-white' : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700'}`}>{cat}</button>
-            ))}
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
-            {filteredProducts.map(product => (
-              <button
-                key={product.id}
-                onClick={() => addToCart(product)}
-                className="relative bg-white dark:bg-gray-800 p-3 sm:p-4 rounded-lg shadow-sm hover:shadow-md transition-all transform hover:-translate-y-1 text-left flex flex-col justify-between h-28 sm:h-32 border border-transparent hover:border-primary dark:hover:border-primary group"
-              >
-                <div>
-                  <h3 className="font-bold text-gray-800 dark:text-gray-100 leading-tight line-clamp-2 text-sm sm:text-base">{product.name}</h3>
-                  <p className="text-[10px] sm:text-xs text-gray-500 dark:text-gray-400 mt-1 truncate">{product.category}</p>
+        {/* Mobile View Navigation (Landing Page) */}
+        {isMobile && mobileView === 'landing' ? (
+          <div className="flex-1 flex flex-col items-center justify-center p-6 bg-gray-50 dark:bg-gray-900 gap-6">
+             <div className="text-center mb-4">
+                <img src="/logo-serendipia.svg" alt="Serendipia" className="w-32 h-32 mx-auto mb-4 drop-shadow-xl" />
+                <h1 className="text-2xl font-black text-primary dark:text-blue-400">SerendipiAPP</h1>
+                <p className="text-gray-500 text-sm">Control de Punto de Venta</p>
+             </div>
+             <button 
+                onClick={() => setMobileView('pos')}
+                className="w-full max-w-sm bg-primary hover:bg-blue-700 text-white p-6 rounded-2xl shadow-xl flex flex-col items-center gap-3 transition-transform active:scale-95"
+             >
+                <div className="bg-white/20 p-3 rounded-full">
+                    <ShoppingCart size={40} />
                 </div>
-                <div className="mt-1 flex justify-between items-end">
-                   <div>
-                     <span className="block text-base sm:text-lg font-bold text-primary dark:text-blue-400">${product.priceUSD.toFixed(2)}</span>
-                     <span className="block text-[10px] sm:text-xs text-gray-400 dark:text-gray-500">Bs. {(product.priceUSD * activeRate).toFixed(2)}</span>
-                   </div>
-                   {product.inventoryId && product.consumption > 0 && (() => {
-                       const inv = inventory.find(i => i.id === product.inventoryId);
-                       const unit = inv?.unit || '';
-                       const name = inv?.name || '';
-                       return <span className="text-[10px] bg-gray-100 dark:bg-gray-700 px-1.5 py-0.5 rounded text-gray-500 dark:text-gray-300" title={name}>{`-${product.consumption} ${unit}`}</span>;
-                   })()}
+                <span className="text-xl font-bold">NUEVA VENTA</span>
+                <span className="text-xs opacity-80">Registrar productos y cobrar</span>
+             </button>
+             
+             <button 
+                onClick={() => executeProtectedAction(() => setIsDashboardOpen(true))}
+                className="w-full max-w-sm bg-secondary hover:bg-slate-700 text-white p-6 rounded-2xl shadow-xl flex flex-col items-center gap-3 transition-transform active:scale-95"
+             >
+                <div className="bg-white/20 p-3 rounded-full">
+                    <BarChart2 size={40} />
                 </div>
-                <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition">
-                  <button
-                    onClick={(e) => { 
-                      e.stopPropagation(); 
-                      setProductToEditId(product.id); 
-                      executeProtectedAction(() => { 
-                        setQuickEditProduct(product); 
-                        setQuickEditPrice(product.priceUSD.toString()); 
-                      }); 
-                    }}
-                    className="p-1 rounded bg-gray-100 dark:bg-gray-700 text-gray-500 hover:text-blue-600"
-                    title="Editar producto"
-                  >
-                    <Edit size={14} />
-                  </button>
-                </div>
-              </button>
-            ))}
-             <button
-                onClick={() => executeProtectedAction(() => setIsProductManagerOpen(true))}
-                className="bg-gray-50 dark:bg-gray-800/50 border-2 border-dashed border-gray-300 dark:border-gray-700 p-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition flex flex-col items-center justify-center h-28 sm:h-32 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200"
-              >
-                <Plus size={24} />
-                <span className="text-sm font-medium mt-1">Nuevo</span>
-              </button>
-          </div>
-        </div>
+                <span className="text-xl font-bold">PANEL DE CONTROL</span>
+                <span className="text-xs opacity-80">Estadísticas, Gastos y Caja</span>
+             </button>
 
-        {/* Right: Cart (Desktop Sidebar) */}
-        <div className="hidden md:flex w-96 bg-white dark:bg-gray-800 shadow-xl flex-col border-l border-gray-200 dark:border-gray-700 z-0 h-full">
-          <div className="p-4 bg-gray-50 dark:bg-gray-900 border-b dark:border-gray-700 flex justify-between items-center">
-            <h2 className="text-lg font-bold text-gray-800 dark:text-white">Orden Actual</h2>
-            <button onClick={() => setCart([])} className="text-xs text-red-500 hover:text-red-700 font-medium disabled:opacity-50 flex items-center gap-1" disabled={cart.length === 0}><Trash2 size={12} /> Limpiar</button>
+             <button 
+                onClick={() => executeProtectedAction(() => setIsProductManagerOpen(true))}
+                className="w-full max-w-sm bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 p-4 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center gap-2"
+             >
+                <Package size={20} />
+                <span className="font-bold">Editar Inventario</span>
+             </button>
           </div>
-          <div className="flex-1 overflow-y-auto p-4 space-y-4">
-            {cart.length === 0 ? (
-              <div className="flex flex-col items-center justify-center h-full text-gray-400 opacity-50 dark:text-gray-600"><div className="text-6xl mb-2">🛒</div><p>Carrito vacío</p></div>
-            ) : (
-              cart.map(item => (<CartItemRow key={item.id} item={item} activeRate={activeRate} updateQuantity={updateQuantity} setItemQuantity={setItemQuantity} removeFromCart={removeFromCart} updatePrice={updatePrice} />))
-            )}
-          </div>
-          <div className="p-4 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
-            <div className="flex justify-between items-end mb-2"><span className="text-gray-500 dark:text-gray-400 text-sm">Total USD</span><span className="text-2xl font-bold text-gray-900 dark:text-white">${cartTotalUSD.toFixed(2)}</span></div>
-            <div className="flex justify-between items-end mb-4"><span className="text-gray-500 dark:text-gray-400 text-sm">Total Bs ({rates.selected})</span><span className="text-xl font-bold text-primary dark:text-blue-400">Bs. {cartTotalVES.toFixed(2)}</span></div>
-            <button onClick={() => setIsCheckoutOpen(true)} disabled={cart.length === 0} className="w-full bg-primary hover:bg-blue-700 disabled:bg-gray-300 dark:disabled:bg-gray-700 text-white font-bold py-3 px-4 rounded-lg transition shadow-lg flex justify-between items-center group"><span>Cobrar</span><span className="bg-white/20 px-2 py-0.5 rounded text-sm group-hover:bg-white/30 transition">Enter ↵</span></button>
-          </div>
-        </div>
+        ) : (
+          <>
+            {/* Left: Product Grid / Mobile Tab Content */}
+            <div className={`flex-1 overflow-y-auto p-2 sm:p-4 bg-gray-100/50 dark:bg-gray-900 ${isMobile ? 'pb-24' : 'pb-4'}`}>
+              
+              {/* Mobile Tab Header */}
+              {isMobile && (
+                <div className="flex bg-white dark:bg-gray-800 rounded-xl p-1 mb-3 shadow-sm border dark:border-gray-700">
+                    <button 
+                        onClick={() => setMobileTab('products')}
+                        className={`flex-1 py-2 rounded-lg font-bold text-sm transition-all ${mobileTab === 'products' ? 'bg-primary text-white shadow-md' : 'text-gray-500'}`}
+                    >
+                        Productos
+                    </button>
+                    <button 
+                        onClick={() => setMobileTab('cart')}
+                        className={`flex-1 py-2 rounded-lg font-bold text-sm transition-all flex items-center justify-center gap-2 ${mobileTab === 'cart' ? 'bg-primary text-white shadow-md' : 'text-gray-500'}`}
+                    >
+                        Orden {cart.length > 0 && <span className="bg-red-500 text-white text-[10px] px-1.5 py-0.5 rounded-full">{cart.reduce((a,c) => a+c.quantity,0)}</span>}
+                    </button>
+                </div>
+              )}
+
+              {/* View: Products (Mobile or Desktop) */}
+              {(!isMobile || mobileTab === 'products') && (
+                <div className="space-y-4 animate-in fade-in slide-in-from-left-4">
+                  {/* Search and Filters */}
+                  <div className="flex gap-2 sticky top-0 z-10 py-1 bg-gray-50/50 dark:bg-gray-900/50 backdrop-blur-sm">
+                    <div className="relative flex-1">
+                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
+                        <input 
+                            type="text" 
+                            className="w-full pl-10 pr-4 py-2 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded-xl text-sm focus:ring-2 focus:ring-primary shadow-sm outline-none dark:text-white"
+                            placeholder="Buscar producto..."
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                        />
+                        {searchQuery && (
+                            <button onClick={() => setSearchQuery('')} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600">
+                                <X size={16} />
+                            </button>
+                        )}
+                    </div>
+                  </div>
+
+                  <div className="flex gap-2 mb-2 overflow-x-auto no-scrollbar py-1">
+                    <button onClick={() => setCategoryFilter('Todas')} className={`px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap border transition-all ${categoryFilter === 'Todas' ? 'bg-primary border-primary text-white shadow-md' : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border-transparent hover:border-gray-200 dark:hover:border-gray-700'}`}>Todas</button>
+                    {categories.map(cat => (
+                    <button key={cat} onClick={() => setCategoryFilter(cat)} className={`px-4 py-1.5 rounded-full text-xs font-bold whitespace-nowrap border transition-all ${categoryFilter === cat ? 'bg-primary border-primary text-white shadow-md' : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border-transparent hover:border-gray-200 dark:hover:border-gray-700'}`}>{cat}</button>
+                    ))}
+                  </div>
+
+                  <div className={`grid ${isMobile ? 'grid-cols-1 gap-2' : 'grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'}`}>
+                    {filteredProducts.map(product => (
+                    <button
+                        key={product.id}
+                        onClick={() => addToCart(product)}
+                        className={`relative bg-white dark:bg-gray-800 p-3 rounded-xl shadow-sm hover:shadow-md transition-all text-left flex items-center justify-between border border-transparent hover:border-primary group ${isMobile ? 'h-16' : 'h-32 flex-col items-stretch'}`}
+                    >
+                        <div className="flex items-center gap-3 overflow-hidden">
+                          {isMobile && (
+                             <div className="w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-primary font-bold shrink-0">
+                                {product.name.charAt(0).toUpperCase()}
+                             </div>
+                          )}
+                          <div className="overflow-hidden">
+                            <h3 className="font-bold text-gray-800 dark:text-gray-100 leading-tight line-clamp-1 text-sm sm:text-base">{product.name}</h3>
+                            <p className="text-[10px] text-gray-500 dark:text-gray-400 mt-0.5 truncate">{product.category}</p>
+                          </div>
+                        </div>
+                        <div className={`flex ${isMobile ? 'flex-col items-end shrink-0' : 'mt-auto justify-between items-end'}`}>
+                        <div className="text-right">
+                            <span className={`block font-bold text-primary dark:text-blue-400 ${isMobile ? 'text-base' : 'text-lg'}`}>${product.priceUSD.toFixed(2)}</span>
+                            <span className="block text-[10px] text-gray-400 dark:text-gray-500">Bs. {(product.priceUSD * activeRate).toFixed(2)}</span>
+                        </div>
+                        </div>
+                    </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* View: Cart (Mobile Only Tab) */}
+              {isMobile && mobileTab === 'cart' && (
+                <div className="space-y-4 animate-in fade-in slide-in-from-right-4">
+                    <div className="flex justify-between items-center mb-2">
+                        <h2 className="text-lg font-bold text-gray-800 dark:text-white">Detalle de la Orden</h2>
+                        <button onClick={() => setCart([])} className="text-xs text-red-500 font-bold flex items-center gap-1" disabled={cart.length === 0}><Trash2 size={12} /> Vaciar</button>
+                    </div>
+                    {cart.length === 0 ? (
+                        <div className="flex flex-col items-center justify-center py-20 text-gray-400 opacity-50 dark:text-gray-600">
+                            <ShoppingCart size={64} className="mb-4" />
+                            <p className="font-bold">No hay productos en la orden</p>
+                            <button onClick={() => setMobileTab('products')} className="mt-4 text-primary font-bold underline">Ir a Productos</button>
+                        </div>
+                    ) : (
+                        <div className="space-y-3">
+                            {cart.map(item => (<CartItemRow key={item.id} item={item} activeRate={activeRate} updateQuantity={updateQuantity} setItemQuantity={setItemQuantity} removeFromCart={removeFromCart} updatePrice={updatePrice} />))}
+                            
+                            <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border dark:border-gray-700 mt-6 space-y-2">
+                                <div className="flex justify-between items-center">
+                                    <span className="text-gray-500 text-sm">Subtotal USD</span>
+                                    <span className="text-lg font-bold text-gray-900 dark:text-white">${cartTotalUSD.toFixed(2)}</span>
+                                </div>
+                                <div className="flex justify-between items-center pb-2 border-b dark:border-gray-700">
+                                    <span className="text-gray-500 text-sm">Subtotal Bs</span>
+                                    <span className="text-lg font-bold text-primary dark:text-blue-400">Bs. {cartTotalVES.toFixed(2)}</span>
+                                </div>
+                                <button onClick={() => setIsCheckoutOpen(true)} className="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg flex justify-between px-6 items-center active:scale-95 transition-transform mt-4">
+                                    <span className="text-lg">COBRAR AHORA</span>
+                                    <ArrowRight size={24} />
+                                </button>
+                            </div>
+                        </div>
+                    )}
+                </div>
+              )}
+
+            </div>
+
+            {/* Right: Cart (Desktop Sidebar) */}
+            <div className="hidden md:flex w-96 bg-white dark:bg-gray-800 shadow-xl flex-col border-l border-gray-200 dark:border-gray-700 z-0 h-full">
+              <div className="p-4 bg-gray-50 dark:bg-gray-900 border-b dark:border-gray-700 flex justify-between items-center">
+                <h2 className="text-lg font-bold text-gray-800 dark:text-white">Orden Actual</h2>
+                <button onClick={() => setCart([])} className="text-xs text-red-500 hover:text-red-700 font-medium disabled:opacity-50 flex items-center gap-1" disabled={cart.length === 0}><Trash2 size={12} /> Limpiar</button>
+              </div>
+              <div className="flex-1 overflow-y-auto p-4 space-y-4">
+                {cart.length === 0 ? (
+                  <div className="flex flex-col items-center justify-center h-full text-gray-400 opacity-50 dark:text-gray-600"><div className="text-6xl mb-2">🛒</div><p>Carrito vacío</p></div>
+                ) : (
+                  cart.map(item => (<CartItemRow key={item.id} item={item} activeRate={activeRate} updateQuantity={updateQuantity} setItemQuantity={setItemQuantity} removeFromCart={removeFromCart} updatePrice={updatePrice} />))
+                )}
+              </div>
+              <div className="p-4 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
+                <div className="flex justify-between items-end mb-2"><span className="text-gray-500 dark:text-gray-400 text-sm">Total USD</span><span className="text-2xl font-bold text-gray-900 dark:text-white">${cartTotalUSD.toFixed(2)}</span></div>
+                <div className="flex justify-between items-end mb-4"><span className="text-gray-500 dark:text-gray-400 text-sm">Total Bs ({rates.selected})</span><span className="text-xl font-bold text-primary dark:text-blue-400">Bs. {cartTotalVES.toFixed(2)}</span></div>
+                <button onClick={() => setIsCheckoutOpen(true)} disabled={cart.length === 0} className="w-full bg-primary hover:bg-blue-700 disabled:bg-gray-300 dark:disabled:bg-gray-700 text-white font-bold py-3 px-4 rounded-lg transition shadow-lg flex justify-between items-center group"><span>Cobrar</span><span className="bg-white/20 px-2 py-0.5 rounded text-sm group-hover:bg-white/30 transition">Enter ↵</span></button>
+              </div>
+            </div>
+          </>
+        )}
 
         {/* Mobile Sticky Cart Footer */}
         <div className="md:hidden fixed bottom-16 left-4 right-4 z-30 pointer-events-none">

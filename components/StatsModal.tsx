@@ -817,19 +817,25 @@ export const DashboardModal: React.FC<DashboardModalProps> = ({
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
                         {accounts.map(acc => {
                             const isUsd = acc.type === 'USD';
                             const equivalent = isUsd ? acc.balance * currentRate : acc.balance / currentRate;
                             return (
-                                <div key={acc.id} className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col justify-between h-32">
-                                    <div>
-                                        <p className="text-gray-500 dark:text-gray-400 text-xs font-bold uppercase mb-1">{acc.name}</p>
-                                        <p className={`text-2xl font-bold ${acc.type === 'USD' ? 'text-green-700 dark:text-green-400' : 'text-blue-700 dark:text-blue-400'}`}>{acc.type === 'USD' ? '$' : 'Bs. '}{acc.balance.toFixed(2)}</p>
-                                        <p className="text-xs text-gray-400 font-medium mt-1">≈ {acc.type === 'USD' ? 'Bs. ' : '$'}{equivalent.toFixed(2)}</p>
+                                <div key={acc.id} className="bg-white dark:bg-gray-800 p-3 sm:p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex justify-between items-center sm:flex-col sm:items-start sm:h-32 group hover:shadow-md transition-all">
+                                    <div className="flex flex-col">
+                                        <p className="text-gray-500 dark:text-gray-400 text-[10px] sm:text-xs font-bold uppercase mb-0.5 sm:mb-1">{acc.name}</p>
+                                        <p className={`text-lg sm:text-2xl font-bold ${acc.type === 'USD' ? 'text-green-700 dark:text-green-400' : 'text-blue-700 dark:text-blue-400'}`}>{acc.type === 'USD' ? '$' : 'Bs. '}{acc.balance.toFixed(2)}</p>
+                                        <p className="text-[10px] sm:text-xs text-gray-400 font-medium sm:mt-1">≈ {acc.type === 'USD' ? 'Bs. ' : '$'}{equivalent.toFixed(2)}</p>
                                     </div>
-                                    <div className="mt-2 pt-2 border-t dark:border-gray-700">
-                                        <button onClick={() => { setAdjustmentData({ ...adjustmentData, accountId: acc.id }); setShowAdjustmentForm(true); }} className="text-xs text-gray-400 hover:text-blue-500 flex items-center gap-1 w-full justify-center"><Edit2 size={10} /> Ajuste Manual</button>
+                                    <div className="flex gap-2">
+                                        <button 
+                                            onClick={() => { setAdjustmentData({ ...adjustmentData, accountId: acc.id }); setShowAdjustmentForm(true); }} 
+                                            className="p-1.5 rounded bg-gray-50 dark:bg-gray-700 text-gray-400 hover:text-blue-500 hover:bg-white dark:hover:bg-gray-600 shadow-sm transition-all"
+                                            title="Ajuste manual"
+                                        >
+                                            <Edit2 size={14} />
+                                        </button>
                                     </div>
                                 </div>
                             );
