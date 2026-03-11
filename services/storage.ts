@@ -67,8 +67,8 @@ export const saveToStorage = async <T>(key: string, data: T): Promise<void> => {
              supabaseData = data.map((a: any) => ({
                 id: a.id,
                 name: a.name,
-                balance: a.balance,
-                currency: a.type, // Map 'type' to 'currency' column
+                balance: Number(a.balance),
+                currency: a.type || a.currency || 'USD', // Safe mapping
                 method_key: a.methodKey
             }));
         } else if (key === 'clients' && Array.isArray(data)) {
@@ -162,13 +162,21 @@ export const loadFromStorage = async <T>(key: string, fallback: T): Promise<T> =
                     minStock: Number(i.min_stock)
                 }));
             } else if (key === 'accounts') {
-                parsedData = data.map(a => ({
-                    id: a.id,
-                    name: a.name,
-                    balance: Number(a.balance),
-                    type: a.currency, // Map 'currency' column to 'type' field
-                    methodKey: a.method_key
-                }));
+                parsedData = data.map(a => {
+                    // Determine type: prefer explicit 'VES', or look for '(BS)' in the name if 'currency' is default 'USD'
+                    let detectedType = a.currency || a.type || 'USD';
+                    if (detectedType === 'USD' && (a.name?.toUpperCase().includes('(BS)') || a.name?.toUpperCase().includes('BS') || a.name?.toLowerCase().includes('pago móvil') || a.name?.toLowerCase().includes('banco'))) {
+                        detectedType = 'VES';
+                    }
+                    
+                    return {
+                        id: a.id,
+                        name: a.name,
+                        balance: Number(a.balance),
+                        type: detectedType as 'USD' | 'VES',
+                        methodKey: a.method_key
+                    };
+                });
             } else if (key === 'clients') {
                  parsedData = data.map(c => ({
                     id: c.id,

@@ -554,21 +554,19 @@ const App: React.FC = () => {
     setInventory(newInventory);
 
     // 2. Update Account Balances
-    setAccounts(prevAccounts => {
-        const nextAccounts = [...prevAccounts];
-        payments.forEach(p => {
-            if (p.method !== PaymentMethod.CREDIT) {
-                const accIndex = nextAccounts.findIndex(acc => acc.methodKey === p.method);
-                if (accIndex > -1) {
-                    nextAccounts[accIndex] = {
-                        ...nextAccounts[accIndex],
-                        balance: nextAccounts[accIndex].balance + p.amount
-                    };
-                }
+    const nextAccounts = [...accounts];
+    payments.forEach(p => {
+        if (p.method !== PaymentMethod.CREDIT) {
+            const accIndex = nextAccounts.findIndex(acc => acc.methodKey === p.method);
+            if (accIndex > -1) {
+                nextAccounts[accIndex] = {
+                    ...nextAccounts[accIndex],
+                    balance: nextAccounts[accIndex].balance + p.amount
+                };
             }
-        });
-        return nextAccounts;
+        }
     });
+    setAccounts(nextAccounts);
 
     // 3. Save Transaction
     const updatedTransactions = [...transactions, newTransaction];
@@ -587,12 +585,12 @@ const App: React.FC = () => {
             transactions: updatedTransactions,
             expenses,
             rates,
-            accounts,
+            accounts: nextAccounts, // Use freshly calculated accounts
             transfers,
             clients,
             settings: { ...settings, lastBackup: Date.now() },
             exportDate: Date.now(),
-            version: '1.2'
+            version: '1.4' // Update version to match schema
         };
         setTimeout(() => triggerAutoBackup(backupData), 1000);
     }
