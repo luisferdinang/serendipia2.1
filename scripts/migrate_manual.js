@@ -21,10 +21,22 @@ if (!supabaseUrl || !supabaseKey) {
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 // 2. Read Backup JSON
-const backupPath = './backup/serendipia_backup_2026-03-11.json';
+const backupPath = './backup/serendipia_autobackup_2026-03-11_08-29-29.json';
 const backupData = JSON.parse(fs.readFileSync(backupPath, 'utf8'));
 
+async function clearTables() {
+    console.log('Cleaning existing data in Supabase...');
+    // Order matters for foreign keys
+    const tables = ['transfers', 'expenses', 'transactions', 'accounts', 'clients', 'inventory', 'products', 'settings', 'rates'];
+    for (const table of tables) {
+        const { error } = await supabase.from(table).delete().neq('id', 'placeholder_impossible_id'); 
+        // Note: .delete() requires a filter in Supabase, .neq matches everything
+        if (error) console.error(`Error cleaning ${table}:`, error);
+    }
+}
+
 async function migrate() {
+    await clearTables();
     console.log('Starting migration from JSON...');
 
     // Mapping logic (same as in storage.ts)

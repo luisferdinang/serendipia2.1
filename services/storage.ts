@@ -68,7 +68,7 @@ export const saveToStorage = async <T>(key: string, data: T): Promise<void> => {
                 id: a.id,
                 name: a.name,
                 balance: a.balance,
-                currency: a.currency,
+                currency: a.type, // Map 'type' to 'currency' column
                 method_key: a.methodKey
             }));
         } else if (key === 'clients' && Array.isArray(data)) {
@@ -166,7 +166,7 @@ export const loadFromStorage = async <T>(key: string, fallback: T): Promise<T> =
                     id: a.id,
                     name: a.name,
                     balance: Number(a.balance),
-                    currency: a.currency,
+                    type: a.currency, // Map 'currency' column to 'type' field
                     methodKey: a.method_key
                 }));
             } else if (key === 'clients') {
