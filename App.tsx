@@ -1040,7 +1040,7 @@ const App: React.FC = () => {
                <Search size={20} />
              </button>
 
-             <button onClick={() => setIsDarkMode(!isDarkMode)} className="p-2 rounded-full text-gray-400 hover:text-gray-800 dark:text-gray-400 dark:hover:text-yellow-400 transition-colors hidden sm:block">
+             <button onClick={() => setIsDarkMode(!isDarkMode)} className="p-2 rounded-full text-gray-400 hover:text-gray-800 dark:text-gray-400 dark:hover:text-yellow-400 transition-colors">
               {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
              </button>
              
@@ -1048,7 +1048,7 @@ const App: React.FC = () => {
              <div className="flex items-center gap-2 border-l pl-2 border-gray-200 dark:border-gray-600 ml-1">
                 <button 
                     onClick={() => executeProtectedAction(() => setIsProductManagerOpen(true))}
-                    className="bg-white dark:bg-gray-700 border dark:border-gray-600 text-gray-600 dark:text-gray-200 p-2 rounded-full hover:bg-gray-50 dark:hover:bg-gray-600 transition shadow-sm hidden sm:block"
+                    className="bg-white dark:bg-gray-700 border dark:border-gray-600 text-gray-600 dark:text-gray-200 p-2 rounded-full hover:bg-gray-50 dark:hover:bg-gray-600 transition shadow-sm"
                     title="Editar Productos"
                 >
                     <Package size={20} />
@@ -1155,39 +1155,28 @@ const App: React.FC = () => {
         </div>
 
         {/* Mobile Sticky Cart Footer */}
-        <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-800 border-t dark:border-gray-700 shadow-[0_-4px_10px_rgba(0,0,0,0.1)] z-30 transition-transform duration-300 transform translate-y-0">
-             {/* Collapsed Cart View (Always visible if items > 0) */}
-             {cart.length > 0 ? (
-                 <div className="p-3">
-                     <div className="flex justify-between items-center mb-2">
-                        <button 
-                            className="text-sm font-bold text-blue-600 dark:text-blue-400 flex items-center gap-1"
-                            onClick={() => {
-                                // Simple toggle logic could go here, for now simpler is better for "just pay"
-                                alert("En móvil, gestiona cantidades arriba o presiona Cobrar.");
-                            }}
-                        >
-                            <ShoppingCart size={16}/> 
-                            <span>{cart.reduce((a,c) => a + c.quantity, 0)} ítems</span>
-                        </button>
-                        <div className="text-right">
-                             <span className="block font-bold text-lg dark:text-white">${cartTotalUSD.toFixed(2)}</span>
-                             <span className="block text-xs text-gray-500 dark:text-gray-400">Bs. {cartTotalVES.toFixed(2)}</span>
+        <div className="md:hidden fixed bottom-16 left-4 right-4 z-30 pointer-events-none">
+            {cart.length > 0 && (
+                <div className="pointer-events-auto bg-primary text-white p-3 rounded-2xl shadow-2xl flex justify-between items-center animate-in slide-in-from-bottom-5">
+                    <div className="flex items-center gap-3">
+                        <div className="relative">
+                            <div className="bg-white text-primary w-10 h-10 rounded-xl flex items-center justify-center font-bold">
+                                {cart.reduce((a,c) => a + c.quantity, 0)}
+                            </div>
                         </div>
-                     </div>
-                     <button 
+                        <div>
+                            <p className="text-[10px] uppercase font-bold opacity-80 leading-none mb-1">Total Orden</p>
+                            <p className="text-xl font-black leading-none">${cartTotalUSD.toFixed(2)}</p>
+                        </div>
+                    </div>
+                    <button 
                         onClick={() => setIsCheckoutOpen(true)} 
-                        className="w-full bg-primary text-white font-bold py-3 rounded-lg shadow-lg flex justify-between px-4 items-center active:scale-95 transition-transform"
+                        className="bg-white/20 hover:bg-white/30 px-6 py-3 rounded-xl font-bold transition-colors flex items-center gap-2"
                     >
-                         <span>Cobrar</span>
-                         <ArrowRight size={20} />
-                     </button>
-                 </div>
-             ) : (
-                 <div className="p-2 text-center text-xs text-gray-400 dark:text-gray-600">
-                     Carrito vacío
-                 </div>
-             )}
+                        Cobrar <ArrowRight size={18} />
+                    </button>
+                </div>
+            )}
         </div>
 
       </main>

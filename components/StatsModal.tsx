@@ -479,15 +479,15 @@ export const DashboardModal: React.FC<DashboardModalProps> = ({
         )}
 
         {/* Tabs */}
-        <div className="flex border-b dark:border-gray-700 overflow-x-auto">
-            <button onClick={() => setActiveTab('overview')} className={`flex-1 py-3 px-4 font-medium flex justify-center items-center gap-2 whitespace-nowrap ${activeTab === 'overview' ? 'border-b-2 border-primary text-primary dark:text-blue-400' : 'text-gray-500'}`}><DollarSign size={18} /> Resumen</button>
-            <button onClick={() => setActiveTab('transactions')} className={`flex-1 py-3 px-4 font-medium flex justify-center items-center gap-2 whitespace-nowrap ${activeTab === 'transactions' ? 'border-b-2 border-primary text-primary dark:text-blue-400' : 'text-gray-500'}`}><List size={18} /> Historial</button>
-            <button onClick={() => setActiveTab('clients')} className={`flex-1 py-3 px-4 font-medium flex justify-center items-center gap-2 whitespace-nowrap ${activeTab === 'clients' ? 'border-b-2 border-primary text-primary dark:text-blue-400' : 'text-gray-500'}`}><Users size={18} /> Clientes</button>
-            <button onClick={() => setActiveTab('debts')} className={`flex-1 py-3 px-4 font-medium flex justify-center items-center gap-2 whitespace-nowrap ${activeTab === 'debts' ? 'border-b-2 border-primary text-primary dark:text-blue-400' : 'text-gray-500'}`}><User size={18} /> Deudas</button>
-            <button onClick={() => setActiveTab('treasury')} className={`flex-1 py-3 px-4 font-medium flex justify-center items-center gap-2 whitespace-nowrap ${activeTab === 'treasury' ? 'border-b-2 border-primary text-primary dark:text-blue-400' : 'text-gray-500'}`}><Wallet size={18} /> Tesorería</button>
-            <button onClick={() => setActiveTab('expenses')} className={`flex-1 py-3 px-4 font-medium flex justify-center items-center gap-2 whitespace-nowrap ${activeTab === 'expenses' ? 'border-b-2 border-primary text-primary dark:text-blue-400' : 'text-gray-500'}`}><ShoppingBag size={18} /> Gastos</button>
-            <button onClick={() => setActiveTab('inventory')} className={`flex-1 py-3 px-4 font-medium flex justify-center items-center gap-2 whitespace-nowrap ${activeTab === 'inventory' ? 'border-b-2 border-primary text-primary dark:text-blue-400' : 'text-gray-500'}`}><Box size={18} /> Inventario</button>
-            <button onClick={() => setActiveTab('data')} className={`flex-1 py-3 px-4 font-medium flex justify-center items-center gap-2 whitespace-nowrap ${activeTab === 'data' ? 'border-b-2 border-primary text-primary dark:text-blue-400' : 'text-gray-500'}`}><Database size={18} /> Datos</button>
+        <div className="flex border-b dark:border-gray-700 overflow-x-auto no-scrollbar sticky top-0 bg-white dark:bg-gray-800 z-10">
+            <button onClick={() => setActiveTab('overview')} className={`flex-1 py-3 px-4 font-bold text-xs sm:text-sm flex justify-center items-center gap-2 whitespace-nowrap transition-colors ${activeTab === 'overview' ? 'border-b-2 border-primary text-primary dark:text-blue-400 bg-blue-50/50 dark:bg-blue-900/10' : 'text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'}`}><DollarSign size={16} /> Resumen</button>
+            <button onClick={() => setActiveTab('transactions')} className={`flex-1 py-3 px-4 font-bold text-xs sm:text-sm flex justify-center items-center gap-2 whitespace-nowrap transition-colors ${activeTab === 'transactions' ? 'border-b-2 border-primary text-primary dark:text-blue-400 bg-blue-50/50 dark:bg-blue-900/10' : 'text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'}`}><List size={16} /> Ventas</button>
+            <button onClick={() => setActiveTab('clients')} className={`flex-1 py-3 px-4 font-bold text-xs sm:text-sm flex justify-center items-center gap-2 whitespace-nowrap transition-colors ${activeTab === 'clients' ? 'border-b-2 border-primary text-primary dark:text-blue-400 bg-blue-50/50 dark:bg-blue-900/10' : 'text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'}`}><Users size={16} /> Clientes</button>
+            <button onClick={() => setActiveTab('debts')} className={`flex-1 py-3 px-4 font-bold text-xs sm:text-sm flex justify-center items-center gap-2 whitespace-nowrap transition-colors ${activeTab === 'debts' ? 'border-b-2 border-primary text-primary dark:text-blue-400 bg-blue-50/50 dark:bg-blue-900/10' : 'text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'}`}><User size={16} /> Deudas</button>
+            <button onClick={() => setActiveTab('treasury')} className={`flex-1 py-3 px-4 font-bold text-xs sm:text-sm flex justify-center items-center gap-2 whitespace-nowrap transition-colors ${activeTab === 'treasury' ? 'border-b-2 border-primary text-primary dark:text-blue-400 bg-blue-50/50 dark:bg-blue-900/10' : 'text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'}`}><Wallet size={16} /> Caja</button>
+            <button onClick={() => setActiveTab('expenses')} className={`flex-1 py-3 px-4 font-bold text-xs sm:text-sm flex justify-center items-center gap-2 whitespace-nowrap transition-colors ${activeTab === 'expenses' ? 'border-b-2 border-primary text-primary dark:text-blue-400 bg-blue-50/50 dark:bg-blue-900/10' : 'text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'}`}><ShoppingBag size={16} /> Gastos</button>
+            <button onClick={() => setActiveTab('inventory')} className={`flex-1 py-3 px-4 font-bold text-xs sm:text-sm flex justify-center items-center gap-2 whitespace-nowrap transition-colors ${activeTab === 'inventory' ? 'border-b-2 border-primary text-primary dark:text-blue-400 bg-blue-50/50 dark:bg-blue-900/10' : 'text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'}`}><Box size={16} /> Stock</button>
+            <button onClick={() => setActiveTab('data')} className={`flex-1 py-3 px-4 font-bold text-xs sm:text-sm flex justify-center items-center gap-2 whitespace-nowrap transition-colors ${activeTab === 'data' ? 'border-b-2 border-primary text-primary dark:text-blue-400 bg-blue-50/50 dark:bg-blue-900/10' : 'text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'}`}><Database size={16} /> Datos</button>
         </div>
         
         <div className="flex-1 overflow-y-auto p-6 bg-gray-50/50 dark:bg-gray-900/50">
@@ -740,7 +740,7 @@ export const DashboardModal: React.FC<DashboardModalProps> = ({
                     <h3 className="text-lg font-semibold dark:text-white">Tesorería y Cuentas</h3>
                     
                     {/* New Aggregated Totals */}
-                    <div className="grid grid-cols-2 gap-4 mb-2">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                         <div className="bg-gradient-to-br from-green-500 to-green-600 text-white p-4 rounded-xl shadow-lg">
                             <p className="text-xs font-bold uppercase opacity-80 mb-1">Total en Divisas ($)</p>
                             <div className="flex items-center gap-2">
@@ -840,8 +840,8 @@ export const DashboardModal: React.FC<DashboardModalProps> = ({
                             <h4 className="font-bold text-sm dark:text-white flex items-center gap-2"><List size={16} /> Últimas Transferencias</h4>
                             <span className="text-xs text-gray-500 dark:text-gray-400">{transfers.length} registros</span>
                         </div>
-                        <div className="max-h-[240px] overflow-auto">
-                            <table className="w-full text-sm text-left">
+                        <div className="max-h-[240px] overflow-auto no-scrollbar">
+                            <table className="w-full text-sm text-left min-w-[600px]">
                                 <thead className="bg-gray-100 dark:bg-gray-700 uppercase text-xs text-gray-700 dark:text-gray-300 sticky top-0 z-10">
                                     <tr><th className="px-4 py-3">Fecha</th><th className="px-4 py-3">Desde → Hacia</th><th className="px-4 py-3 text-right">Monto Origen</th><th className="px-4 py-3 text-right">Monto Destino</th><th className="px-4 py-3 text-right">Tasa</th></tr>
                                 </thead>
@@ -894,24 +894,28 @@ export const DashboardModal: React.FC<DashboardModalProps> = ({
                     </div>
                     <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow border dark:border-gray-700 mb-4">
                         <h4 className="font-bold text-sm mb-2 dark:text-white">Nuevo Gasto Vario</h4>
-                        <div className="flex gap-2 flex-wrap sm:flex-nowrap items-center">
-                            <input type="date" className="w-32 p-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white text-xs h-10" value={expenseDate} onChange={e => setExpenseDate(e.target.value)} placeholder="Hoy" />
-                            <div className="flex bg-gray-100 dark:bg-gray-700 rounded-lg p-1 border border-gray-200 dark:border-gray-600 h-10 shrink-0">
-                                <button onClick={() => setExpenseCurrency('USD')} className={`px-3 py-1 text-xs font-bold rounded-md transition-colors ${expenseCurrency === 'USD' ? 'bg-white dark:bg-gray-600 text-green-600 shadow-sm' : 'text-gray-400'}`}>$</button>
-                                <button onClick={() => setExpenseCurrency('VES')} className={`px-3 py-1 text-xs font-bold rounded-md transition-colors ${expenseCurrency === 'VES' ? 'bg-white dark:bg-gray-600 text-blue-600 shadow-sm' : 'text-gray-400'}`}>Bs</button>
+                        <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center">
+                            <div className="flex gap-2 w-full sm:w-auto">
+                                <input type="date" className="flex-1 sm:w-32 p-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white text-sm h-10" value={expenseDate} onChange={e => setExpenseDate(e.target.value)} placeholder="Hoy" />
+                                <div className="flex bg-gray-100 dark:bg-gray-700 rounded-lg p-1 border border-gray-200 dark:border-gray-600 h-10 shrink-0">
+                                    <button onClick={() => setExpenseCurrency('USD')} className={`px-3 py-1 text-xs font-bold rounded-md transition-colors ${expenseCurrency === 'USD' ? 'bg-white dark:bg-gray-600 text-green-600 shadow-sm' : 'text-gray-400'}`}>$</button>
+                                    <button onClick={() => setExpenseCurrency('VES')} className={`px-3 py-1 text-xs font-bold rounded-md transition-colors ${expenseCurrency === 'VES' ? 'bg-white dark:bg-gray-600 text-blue-600 shadow-sm' : 'text-gray-400'}`}>Bs</button>
+                                </div>
                             </div>
-                            <input className="flex-grow p-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white h-10" placeholder="Descripción (ej: Bolsas, Limpieza)" value={newExpense.desc} onChange={e => setNewExpense({...newExpense, desc: e.target.value})} />
-                            <input type="number" className="w-28 p-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white h-10" placeholder={expenseCurrency === 'USD' ? "Monto ($)" : "Monto (Bs)"} value={newExpense.amount} onChange={e => setNewExpense({...newExpense, amount: e.target.value})} />
-                            <select className="w-40 p-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white h-10 text-xs" value={newExpense.accountId} onChange={e => setNewExpense({...newExpense, accountId: e.target.value})} >
-                                <option value="">Pagar desde...</option>
-                                {accounts.map(acc => (<option key={acc.id} value={acc.id}>{acc.name} ({acc.type})</option>))}
-                            </select>
-                            <button onClick={handleAddExpense} className="bg-red-500 text-white w-10 h-10 flex items-center justify-center rounded hover:bg-red-600 font-bold shrink-0"><Plus size={18}/></button>
+                            <input className="w-full p-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white h-10 text-sm" placeholder="Descripción (ej: Bolsas, Limpieza)" value={newExpense.desc} onChange={e => setNewExpense({...newExpense, desc: e.target.value})} />
+                            <div className="flex gap-2 w-full sm:w-auto">
+                                <input type="number" className="flex-1 sm:w-28 p-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white h-10 text-sm" placeholder={expenseCurrency === 'USD' ? "Monto ($)" : "Monto (Bs)"} value={newExpense.amount} onChange={e => setNewExpense({...newExpense, amount: e.target.value})} />
+                                <select className="flex-1 sm:w-40 p-2 border rounded dark:bg-gray-700 dark:border-gray-600 dark:text-white h-10 text-sm" value={newExpense.accountId} onChange={e => setNewExpense({...newExpense, accountId: e.target.value})} >
+                                    <option value="">Pagar de...</option>
+                                    {accounts.map(acc => (<option key={acc.id} value={acc.id}>{acc.name} ({acc.type})</option>))}
+                                </select>
+                            </div>
+                            <button onClick={handleAddExpense} className="bg-red-500 text-white p-2 rounded hover:bg-red-600 font-bold flex items-center justify-center h-10 sm:w-10 grow sm:grow-0 transition-colors"><Plus size={20} className="sm:hidden mr-2"/> {window.innerWidth < 640 ? 'Agregar Gasto' : <Plus size={20}/>}</button>
                         </div>
                     </div>
                     <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden flex flex-col h-[400px]">
-                        <div className="flex-1 overflow-auto">
-                            <table className="w-full text-sm text-left">
+                        <div className="flex-1 overflow-auto no-scrollbar">
+                            <table className="w-full text-sm text-left min-w-[500px]">
                                 <thead className="bg-gray-100 dark:bg-gray-700 uppercase text-xs text-gray-700 dark:text-gray-300 sticky top-0 z-10">
                                     <tr><th className="px-4 py-3">Fecha</th><th className="px-4 py-3">Descripción</th><th className="px-4 py-3 text-right">Monto</th><th className="px-4 py-3 text-center">Acciones</th></tr>
                                 </thead>
@@ -960,9 +964,9 @@ export const DashboardModal: React.FC<DashboardModalProps> = ({
                                     <p className={`text-2xl font-bold ${clientDetails.currentDebt > 0.01 ? 'text-orange-800 dark:text-orange-200' : 'text-green-800 dark:text-green-200'}`}>{formatMoney(clientDetails.currentDebt)}</p>
                                 </div>
                             </div>
-                            <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
-                                <div className="px-4 py-3 bg-gray-50 dark:bg-gray-900 border-b dark:border-gray-700 font-bold text-sm text-gray-700 dark:text-gray-300">Historial de Movimientos</div>
-                                <table className="w-full text-sm text-left">
+                            <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-x-auto no-scrollbar">
+                                <div className="px-4 py-3 bg-gray-50 dark:bg-gray-900 border-b dark:border-gray-700 font-bold text-sm text-gray-700 dark:text-gray-300 sticky left-0">Historial de Movimientos</div>
+                                <table className="w-full text-sm text-left min-w-[650px]">
                                     <thead className="bg-gray-100 dark:bg-gray-700 uppercase text-xs text-gray-700 dark:text-gray-300">
                                         <tr><th className="px-4 py-3">Fecha</th><th className="px-4 py-3">Resumen Compra</th><th className="px-4 py-3 text-right">Total</th><th className="px-4 py-3 text-center">Estado</th><th className="px-4 py-3 text-center">Acción</th></tr>
                                     </thead>
@@ -982,8 +986,8 @@ export const DashboardModal: React.FC<DashboardModalProps> = ({
                             </div>
                         </div>
                     ) : (
-                        <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
-                            <table className="w-full text-sm text-left">
+                        <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-x-auto no-scrollbar">
+                            <table className="w-full text-sm text-left min-w-[500px]">
                                 <thead className="bg-gray-100 dark:bg-gray-700 uppercase text-xs text-gray-700 dark:text-gray-300">
                                     <tr><th className="px-4 py-3">Nombre</th><th className="px-4 py-3">C.I. / RIF</th><th className="px-4 py-3">Teléfono</th><th className="px-4 py-3 text-center">Acciones</th></tr>
                                 </thead>
