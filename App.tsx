@@ -279,7 +279,7 @@ const App: React.FC = () => {
         }
 
         setIsReady(true);
-        fetchBCVRate();
+        fetchBCVRate(loadedRates);
 
         // Optional: Trigger migration if this is the first time (could be controlled by a setting)
         const hasMigrated = localStorage.getItem('supabase_migrated');
@@ -331,21 +331,32 @@ const App: React.FC = () => {
   }, [isDarkMode]);
 
   // Function to fetch BCV Rate
-  const fetchBCVRate = async () => {
+  const fetchBCVRate = async (forceRefreshOrRates?: boolean | ExchangeRates | React.MouseEvent | any) => {
+    const isForceRefresh = forceRefreshOrRates === true || (forceRefreshOrRates && typeof forceRefreshOrRates.preventDefault === 'function');
+    
+    const currentRates = (forceRefreshOrRates && typeof forceRefreshOrRates.bcv === 'number') 
+      ? forceRefreshOrRates as ExchangeRates 
+      : rates;
+
+    const todayStr = new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().split('T')[0];
+
+    if (!isForceRefresh && currentRates.lastFetchedDate === todayStr) {
+      // Ya se consultó hoy, evitamos gasto de API
+      return;
+    }
+
     setLoadingRate(true);
     try {
-      const response = await fetch('https://api.dolarvzla.com/public/exchange-rate', {
-        headers: {
-          'x-dolarvzla-key': '7ef782904c6523350841061468e8d5f318e1fb1ec26cd4e7fae895defa68ef29'
-        }
-      });
+      const apiKey = '9b24cfafea7bd461fd7a9429';
+      const response = await fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/USD`);
       if (response.ok) {
         const data = await response.json();
-        if (data.current && data.current.usd) {
-          const newRate = parseFloat(data.current.usd);
+        if (data.result === 'success' && data.conversion_rates && data.conversion_rates.VES) {
+          const newRate = parseFloat(data.conversion_rates.VES);
           setRates(prev => ({
             ...prev,
-            bcv: newRate
+            bcv: newRate,
+            lastFetchedDate: todayStr
           }));
         }
       }

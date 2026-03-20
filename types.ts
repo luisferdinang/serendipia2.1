@@ -55,6 +55,7 @@ export interface ExchangeRates {
   bcv: number;
   parallel: number;
   selected: RateType;
+  lastFetchedDate?: string;
 }
 
 export interface TransactionPayment {
