@@ -198,17 +198,50 @@ export const DashboardModal: React.FC<DashboardModalProps> = ({
 
   const efficiencyStats = useMemo(() => {
     let totalCreditIssued = 0; let totalCreditPaid = 0;
-    transactions.forEach(t => { const creditP = t.payments.find(p => p.method === PaymentMethod.CREDIT); if(creditP) { totalCreditIssued += creditP.amountInUSD; const paid = t.debtPayments?.reduce((sum, dp) => sum + dp.amountInUSD, 0) || 0; totalCreditPaid += paid; } });
+    transactions.forEach(t => { 
+        const creditP = t.payments.find(p => p.method === PaymentMethod.CREDIT); 
+        if(creditP) { 
+            totalCreditIssued += (creditP.amountInUSD || 0); 
+            const paid = t.debtPayments?.reduce((sum, dp) => sum + (dp.amountInUSD || 0), 0) || 0; 
+            totalCreditPaid += paid; 
+        } 
+    });
     const efficiency = totalCreditIssued > 0 ? (totalCreditPaid / totalCreditIssued) * 100 : 100;
     return { issued: totalCreditIssued, paid: totalCreditPaid, efficiency };
   }, [transactions]);
 
   const timeSeriesData = useMemo(() => {
       const dataMap = new Map<string, { date: string, sales: number, expense: number }>();
-      filteredTransactions.forEach(t => { const dateKey = new Date(t.timestamp).toLocaleDateString(); if(!dataMap.has(dateKey)) dataMap.set(dateKey, { date: dateKey, sales: 0, expense: 0 }); const dayData = dataMap.get(dateKey)!; let daySales = 0; t.payments.forEach(p => { if (p.method !== PaymentMethod.CREDIT) daySales += p.amountInUSD; }); dayData.sales += daySales; });
-      transactions.forEach(t => { if (t.debtPayments) { t.debtPayments.forEach(dp => { if (dp.timestamp && dp.timestamp >= dateRange.start && dp.timestamp <= dateRange.end) { const dateKey = new Date(dp.timestamp).toLocaleDateString(); if(!dataMap.has(dateKey)) dataMap.set(dateKey, { date: dateKey, sales: 0, expense: 0 }); dataMap.get(dateKey)!.sales += dp.amountInUSD; } }); } });
-      filteredExpenses.forEach(e => { const dateKey = new Date(e.timestamp).toLocaleDateString(); if(!dataMap.has(dateKey)) dataMap.set(dateKey, { date: dateKey, sales: 0, expense: 0 }); dataMap.get(dateKey)!.expense += e.amountUSD; });
-      return Array.from(dataMap.values()).sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()).map(item => ({ ...item, sales: item.sales * (currencyMode === 'VES' ? currentRate : 1), expense: item.expense * (currencyMode === 'VES' ? currentRate : 1), displayDate: item.date.split('/').slice(0, 2).join('/') }));
+      filteredTransactions.forEach(t => { 
+          const dateKey = new Date(t.timestamp).toISOString().split('T')[0]; 
+          if(!dataMap.has(dateKey)) dataMap.set(dateKey, { date: dateKey, sales: 0, expense: 0 }); 
+          const dayData = dataMap.get(dateKey)!; 
+          let daySales = 0; 
+          t.payments.forEach(p => { if (p.method !== PaymentMethod.CREDIT) daySales += (p.amountInUSD || 0); }); 
+          dayData.sales += daySales; 
+      });
+      transactions.forEach(t => { 
+          if (t.debtPayments) { 
+              t.debtPayments.forEach(dp => { 
+                  if (dp.timestamp && dp.timestamp >= dateRange.start && dp.timestamp <= dateRange.end) { 
+                      const dateKey = new Date(dp.timestamp).toISOString().split('T')[0]; 
+                      if(!dataMap.has(dateKey)) dataMap.set(dateKey, { date: dateKey, sales: 0, expense: 0 }); 
+                      dataMap.get(dateKey)!.sales += (dp.amountInUSD || 0); 
+                  } 
+              }); 
+          } 
+      });
+      filteredExpenses.forEach(e => { 
+          const dateKey = new Date(e.timestamp).toISOString().split('T')[0]; 
+          if(!dataMap.has(dateKey)) dataMap.set(dateKey, { date: dateKey, sales: 0, expense: 0 }); 
+          dataMap.get(dateKey)!.expense += (e.amountUSD || 0); 
+      });
+      return Array.from(dataMap.values()).sort((a, b) => a.date.localeCompare(b.date)).map(item => ({ 
+          ...item, 
+          sales: item.sales * (currencyMode === 'VES' ? currentRate : 1), 
+          expense: item.expense * (currencyMode === 'VES' ? currentRate : 1), 
+          displayDate: item.date.split('-').slice(1, 3).reverse().join('/') 
+      }));
   }, [filteredTransactions, filteredExpenses, transactions, dateRange, currencyMode, currentRate]);
 
   const currencyDistribution = useMemo(() => {
@@ -221,7 +254,14 @@ export const DashboardModal: React.FC<DashboardModalProps> = ({
   }, [filteredTransactions, transactions, dateRange, currencyMode, currentRate]);
 
   const debts = useMemo(() => {
-      return transactions.filter(t => !t.isPaid && t.payments.some(p => p.method === PaymentMethod.CREDIT)).map(t => { const creditPayment = t.payments.find(p => p.method === PaymentMethod.CREDIT); const initialDebt = creditPayment ? creditPayment.amountInUSD : 0; const alreadyPaid = t.debtPayments?.reduce((sum, p) => sum + p.amountInUSD, 0) || 0; const remaining = initialDebt - alreadyPaid; if (remaining <= 0.01) return null; return { ...t, debtAmount: remaining }; }).filter(t => t !== null) as (Transaction & { debtAmount: number })[];
+      return transactions.filter(t => !t.isPaid && t.payments.some(p => p.method === PaymentMethod.CREDIT)).map(t => { 
+          const creditPayment = t.payments.find(p => p.method === PaymentMethod.CREDIT); 
+          const initialDebt = creditPayment ? (creditPayment.amountInUSD || 0) : 0; 
+          const alreadyPaid = t.debtPayments?.reduce((sum, p) => sum + (p.amountInUSD || 0), 0) || 0; 
+          const remaining = initialDebt - alreadyPaid; 
+          if (remaining <= 0.01) return null; 
+          return { ...t, debtAmount: remaining }; 
+      }).filter(t => t !== null) as (Transaction & { debtAmount: number })[];
   }, [transactions]);
 
   const clientDetails = useMemo(() => {
@@ -230,11 +270,21 @@ export const DashboardModal: React.FC<DashboardModalProps> = ({
     clientTx.sort((a, b) => b.timestamp - a.timestamp);
     const totalSpent = clientTx.reduce((sum, t) => sum + t.totalUSD, 0);
     let currentDebt = 0;
-    clientTx.forEach(t => { const creditPayment = t.payments.find(p => p.method === PaymentMethod.CREDIT); if (creditPayment) { const debtAmount = creditPayment.amountInUSD; const paidAmount = t.debtPayments?.reduce((sum, p) => sum + p.amountInUSD, 0) || 0; currentDebt += Math.max(0, debtAmount - paidAmount); } });
+    clientTx.forEach(t => { 
+        const creditPayment = t.payments.find(p => p.method === PaymentMethod.CREDIT); 
+        if (creditPayment) { 
+            const debtAmount = creditPayment.amountInUSD || 0; 
+            const paidAmount = t.debtPayments?.reduce((sum, p) => sum + (p.amountInUSD || 0), 0) || 0; 
+            currentDebt += Math.max(0, debtAmount - paidAmount); 
+        } 
+    });
     return { transactions: clientTx, totalSpent, currentDebt };
   }, [viewingClient, transactions]);
 
-  const formatMoney = (amountUSD: number) => currencyMode === 'USD' ? `$${amountUSD.toFixed(2)}` : `Bs. ${(amountUSD * currentRate).toFixed(2)}`;
+  const formatMoney = (amountUSD: number = 0) => {
+    const val = amountUSD ?? 0;
+    return currencyMode === 'USD' ? `$${val.toFixed(2)}` : `Bs. ${(val * currentRate).toFixed(2)}`;
+  };
   const multiplier = currencyMode === 'USD' ? 1 : currentRate;
 
   const topProducts = useMemo(() => {
