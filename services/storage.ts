@@ -85,6 +85,7 @@ export const saveToStorage = async <T>(key: string, data: T): Promise<void> => {
                 id: e.id,
                 account_id: e.accountId,
                 amount: e.amountPaid,
+                amount_usd: e.amountUSD,
                 description: e.description,
                 category: e.category,
                 timestamp: new Date(e.timestamp).toISOString()
@@ -191,6 +192,7 @@ export const loadFromStorage = async <T>(key: string, fallback: T): Promise<T> =
                     id: e.id,
                     accountId: e.account_id,
                     amountPaid: Number(e.amount),
+                    amountUSD: Number(e.amount_usd || 0),
                     description: e.description,
                     category: e.category,
                     timestamp: new Date(e.timestamp || e.created_at).getTime()

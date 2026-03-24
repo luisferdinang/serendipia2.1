@@ -127,6 +127,7 @@ async function migrate() {
             id: e.id,
             account_id: e.accountId,
             amount: e.amountPaid,
+            amount_usd: e.amountUSD,
             description: e.description,
             category: e.category,
             timestamp: new Date(e.timestamp).toISOString()
